@@ -18,7 +18,7 @@
 #Sample Feature Definition Template
 @FPUIComponentTest
 Feature: Verify UI components of the 'Forgot Password'
- 	link for the Carter App
+				 link for the Carter App
 
   @UIComponentTest
   Scenario Outline: Verify UI components

@@ -3,42 +3,18 @@
     "line": 20,
     "elements": [
       {
-        "start_timestamp": "2023-04-22T20:25:17.321Z",
-        "before": [
-          {
-            "result": {
-              "duration": 1287786400,
-              "status": "passed"
-            },
-            "match": {
-              "location": "step_definitions.CommonHooks.setup()"
-            }
-          }
-        ],
-        "line": 31,
-        "name": "Verify UI components",
+        "line": 22,
+        "name": "",
         "description": "",
-        "id": "verify-ui-components-of-the--forgot-password-;verify-ui-components;;2",
-        "after": [
-          {
-            "result": {
-              "duration": 210932800,
-              "status": "passed"
-            },
-            "match": {
-              "location": "step_definitions.CommonHooks.tearDown()"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario Outline",
+        "type": "background",
+        "keyword": "Background",
         "steps": [
           {
             "result": {
-              "duration": 1337531700,
+              "duration": 1341726100,
               "status": "passed"
             },
-            "line": 25,
+            "line": 23,
             "name": "I go to Crater App Website",
             "match": {
               "location": "step_definitions.forgotLoginUIComponentsSteps.i_go_to_crater_app_website()"
@@ -47,54 +23,122 @@
           },
           {
             "result": {
-              "duration": 170997900,
+              "duration": 171653200,
               "status": "passed"
             },
-            "line": 26,
+            "line": 24,
             "name": "I click Forgot Password link",
             "match": {
               "location": "step_definitions.forgotLoginUIComponentsSteps.i_click_forgot_password_link()"
             },
             "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-04-22T23:25:49.694Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1268043000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "step_definitions.CommonHooks.setup()"
+            }
+          }
+        ],
+        "line": 27,
+        "name": "User enters an invalid email",
+        "description": "",
+        "id": "verify-forgot-password-functionality-for-crater-invoice-app;user-enters-an-invalid-email",
+        "after": [
+          {
+            "result": {
+              "duration": 164348000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "step_definitions.CommonHooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 347650000,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "I enter an invalid email to the rest field",
+            "match": {
+              "location": "step_definitions.forgotLoginFunctionalitySteps.i_enter_an_invalid_email_to_the_rest_field()"
+            },
+            "keyword": "When "
           },
           {
             "result": {
-              "duration": 108999200,
+              "duration": 40999000,
               "status": "passed"
             },
-            "line": 27,
-            "name": "I see a \"text field\" labeled \"Enter Email\"",
+            "line": 29,
+            "name": "I see an error message",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"text field\"",
-                  "offset": 8
-                },
-                {
-                  "val": "\"Enter Email\"",
-                  "offset": 29
-                }
-              ],
-              "location": "step_definitions.forgotLoginUIComponentsSteps.i_see_a_labeled(java.lang.String,java.lang.String)"
+              "location": "step_definitions.forgotLoginFunctionalitySteps.i_see_an_error_message()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@FPUIComponentTest"
+            "name": "@ForgotPasswordFunctionality"
           },
           {
-            "name": "@UIComponentTest"
+            "name": "@testCase1"
           }
         ]
       },
       {
-        "start_timestamp": "2023-04-22T20:25:20.516Z",
+        "line": 22,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1149888500,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "I go to Crater App Website",
+            "match": {
+              "location": "step_definitions.forgotLoginUIComponentsSteps.i_go_to_crater_app_website()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 157509800,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "I click Forgot Password link",
+            "match": {
+              "location": "step_definitions.forgotLoginUIComponentsSteps.i_click_forgot_password_link()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-04-22T23:25:53.102Z",
         "before": [
           {
             "result": {
-              "duration": 771999000,
+              "duration": 824178700,
               "status": "passed"
             },
             "match": {
@@ -103,13 +147,13 @@
           }
         ],
         "line": 32,
-        "name": "Verify UI components",
+        "name": "User enters a valid email",
         "description": "",
-        "id": "verify-ui-components-of-the--forgot-password-;verify-ui-components;;3",
+        "id": "verify-forgot-password-functionality-for-crater-invoice-app;user-enters-a-valid-email",
         "after": [
           {
             "result": {
-              "duration": 175592600,
+              "duration": 173904400,
               "status": "passed"
             },
             "match": {
@@ -118,14 +162,91 @@
           }
         ],
         "type": "scenario",
-        "keyword": "Scenario Outline",
+        "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 1203147000,
+              "duration": 379031200,
               "status": "passed"
             },
-            "line": 25,
+            "line": 33,
+            "name": "I enter a valid email to the reset field",
+            "match": {
+              "location": "step_definitions.forgotLoginFunctionalitySteps.i_enter_a_valid_email_to_the_reset_field()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 42998800,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "I click on Send Rest Link button",
+            "match": {
+              "location": "step_definitions.forgotLoginFunctionalitySteps.i_click_on_send_rest_link_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1139784100,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "I should see a popup alert with the message",
+            "match": {
+              "location": "step_definitions.forgotLoginFunctionalitySteps.i_should_see_a_popup_alert_with_the_message()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 64000200,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "I click Back to Login? link",
+            "match": {
+              "location": "step_definitions.forgotLoginFunctionalitySteps.i_click_back_to_login_link()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 26024800,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "I should be directed to the Login Page",
+            "match": {
+              "location": "step_definitions.forgotLoginFunctionalitySteps.i_should_be_directed_to_the_login_page()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ForgotPasswordFunctionality"
+          },
+          {
+            "name": "@testCase2"
+          }
+        ]
+      },
+      {
+        "line": 22,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1682524300,
+              "status": "passed"
+            },
+            "line": 23,
             "name": "I go to Crater App Website",
             "match": {
               "location": "step_definitions.forgotLoginUIComponentsSteps.i_go_to_crater_app_website()"
@@ -134,54 +255,24 @@
           },
           {
             "result": {
-              "duration": 152009000,
+              "duration": 145809700,
               "status": "passed"
             },
-            "line": 26,
+            "line": 24,
             "name": "I click Forgot Password link",
             "match": {
               "location": "step_definitions.forgotLoginUIComponentsSteps.i_click_forgot_password_link()"
             },
             "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 72257500,
-              "status": "passed"
-            },
-            "line": 27,
-            "name": "I see a \"button\" labeled \"Send Reset Link\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"button\"",
-                  "offset": 8
-                },
-                {
-                  "val": "\"Send Reset Link\"",
-                  "offset": 25
-                }
-              ],
-              "location": "step_definitions.forgotLoginUIComponentsSteps.i_see_a_labeled(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@FPUIComponentTest"
-          },
-          {
-            "name": "@UIComponentTest"
           }
         ]
       },
       {
-        "start_timestamp": "2023-04-22T20:25:22.900Z",
+        "start_timestamp": "2023-04-22T23:25:57.071Z",
         "before": [
           {
             "result": {
-              "duration": 745001200,
+              "duration": 726005400,
               "status": "passed"
             },
             "match": {
@@ -189,14 +280,14 @@
             }
           }
         ],
-        "line": 33,
-        "name": "Verify UI components",
+        "line": 40,
+        "name": "User goes back to Login Page",
         "description": "",
-        "id": "verify-ui-components-of-the--forgot-password-;verify-ui-components;;4",
+        "id": "verify-forgot-password-functionality-for-crater-invoice-app;user-goes-back-to-login-page",
         "after": [
           {
             "result": {
-              "duration": 180002100,
+              "duration": 167449800,
               "status": "passed"
             },
             "match": {
@@ -205,73 +296,51 @@
           }
         ],
         "type": "scenario",
-        "keyword": "Scenario Outline",
+        "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 1304257200,
+              "duration": 128329900,
               "status": "passed"
             },
-            "line": 25,
-            "name": "I go to Crater App Website",
+            "line": 41,
+            "name": "I click Back to Login? link",
             "match": {
-              "location": "step_definitions.forgotLoginUIComponentsSteps.i_go_to_crater_app_website()"
+              "location": "step_definitions.forgotLoginFunctionalitySteps.i_click_back_to_login_link()"
             },
-            "keyword": "Given "
+            "keyword": "When "
           },
           {
             "result": {
-              "duration": 148024700,
+              "duration": 33998300,
               "status": "passed"
             },
-            "line": 26,
-            "name": "I click Forgot Password link",
+            "line": 42,
+            "name": "I should be directed to the Login Page",
             "match": {
-              "location": "step_definitions.forgotLoginUIComponentsSteps.i_click_forgot_password_link()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 67999900,
-              "status": "passed"
-            },
-            "line": 27,
-            "name": "I see a \"link\" labeled \"Back to Login?\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"link\"",
-                  "offset": 8
-                },
-                {
-                  "val": "\"Back to Login?\"",
-                  "offset": 23
-                }
-              ],
-              "location": "step_definitions.forgotLoginUIComponentsSteps.i_see_a_labeled(java.lang.String,java.lang.String)"
+              "location": "step_definitions.forgotLoginFunctionalitySteps.i_should_be_directed_to_the_login_page()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@FPUIComponentTest"
+            "name": "@ForgotPasswordFunctionality"
           },
           {
-            "name": "@UIComponentTest"
+            "name": "@testCase3"
           }
         ]
       }
     ],
-    "name": "Verify UI components of the \u0027Forgot Password\u0027",
-    "description": " \tlink for the Carter App",
-    "id": "verify-ui-components-of-the--forgot-password-",
+    "name": "Verify Forgot Password Functionality for Crater Invoice App",
+    "description": "",
+    "id": "verify-forgot-password-functionality-for-crater-invoice-app",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/forgotLoginUIComponents.feature",
+    "uri": "file:src/test/resources/features/forgotLoginFunctionality.feature",
     "tags": [
       {
-        "name": "@FPUIComponentTest",
+        "name": "@ForgotPasswordFunctionality",
         "type": "Tag",
         "location": {
           "line": 19,

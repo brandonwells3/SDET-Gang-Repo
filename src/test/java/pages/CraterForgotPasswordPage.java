@@ -13,18 +13,21 @@ public class CraterForgotPasswordPage {
 		
 	}
 	
-	@FindBy ( xpath = "")
-	public WebElement ForgotPasswordCraterText;
 	
 	@FindBy ( name = "email")
 	public WebElement ForgotPasswordEnterEmailTextBox;
 
-	@FindBy (xpath = "//div[text()='Send Reset Link']")
+	@FindBy ( xpath = "//div[text()='Send Reset Link']")
 	public WebElement ForgotPasswordSendRestBTN;
 	
-	@FindBy (xpath = "//a[text()='Back to Login?']")
+	@FindBy ( xpath = "//a[text()='Back to Login?']")
 	public WebElement ForgotPasswordBackToLoginLink;
 	
+	@FindBy ( xpath = "//div[@class=\"flex items-start\"]")
+	public WebElement ForgotPasswordMessPopUp;
+	
+	@FindBy ( xpath = "//span[text()=\"Incorrect Email.\"]")
+	public WebElement ForgotPasswordIncorrectEmailErrorMess;
 	
 	
 	
