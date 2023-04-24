@@ -16,33 +16,27 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
-@ForgotPasswordFunctionality 
+@ForgotPasswordFunctionality
 Feature: Verify Forgot Password Functionality for Crater Invoice App
 
   Background: 
     Given I go to Crater App Website
     And I click Forgot Password link
 
-  @testCase1
+  @FPFunctionalitytestCase1
   Scenario: User enters an invalid email
-  	When I enter an invalid email to the rest field
-  	Then I see an error message
-   
-   @testCase2
-   Scenario: User enters a valid email
-   When I enter a valid email to the reset field 
-   And I click on Send Rest Link button
-   Then I should see a popup alert with the message
-   When I click Back to Login? link
-   Then I should be directed to the Login Page
-   
-   @testCase3
-   Scenario: User goes back to Login Page
-   When I click Back to Login? link
-   Then I should be directed to the Login Page
-   
-   
-   
-   
-   
-   
+    When I enter an invalid email to the rest field
+    Then I see an error message
+
+  @FPFunctionalitytestCase2
+  Scenario: User enters a valid email
+    When I enter a valid email to the reset field
+    And I click on Send Rest Link button
+    Then I should see a popup alert with a message
+    When I click Back to Login? link
+    Then I should be directed to the Login Page
+
+  @FPFunctionalitytestCase3
+  Scenario: User goes back to Login Page
+    When I click Back to Login? link
+    Then I should be directed to the Login Page

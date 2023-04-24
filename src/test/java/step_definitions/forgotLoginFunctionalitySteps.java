@@ -44,7 +44,7 @@ public class forgotLoginFunctionalitySteps {
 	public void i_enter_a_valid_email_to_the_reset_field() {
 		forgotPage = new CraterForgotPasswordPage();
 		utils = new BrowserUtils();
-		utils.actionsSendKeys(forgotPage.ForgotPasswordEnterEmailTextBox, DataReader.getProperty("testUser1"));
+		utils.actionsSendKeys(forgotPage.ForgotPasswordEnterEmailTextBox, DataReader.getProperty("dummyUser"));
 	}
 	
 	@When("I click on Send Rest Link button")
@@ -53,8 +53,8 @@ public class forgotLoginFunctionalitySteps {
 		forgotPage.ForgotPasswordSendRestBTN.click();
 		
 	}
-	@Then("I should see a popup alert with the message")
-	public void i_should_see_a_popup_alert_with_the_message() {
+	@Then("I should see a popup alert with a message")
+	public void i_should_see_a_popup_alert_with_a_message() {
 		forgotPage = new CraterForgotPasswordPage();
 		utils.waitUntilElementVisible(forgotPage.ForgotPasswordMessPopUp);
 		Assert.assertTrue(forgotPage.ForgotPasswordMessPopUp.isDisplayed());
