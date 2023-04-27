@@ -23,8 +23,9 @@ Feature: Test Functionality of Reset Password Link
     Given I go to Crater App Website
     And I click Forgot Password link
     
-    When I enter dummy email
-    Then I should see a popup alert with a message
+    When I enter dummy email to the email rest field
+    And I click Send Reset Link button
+    Then I should see a popup alert Success!
     When I go to gmail.com
     And I open an email with the subject Rest Password Notification
     Then I should see an email reset link
@@ -32,58 +33,91 @@ Feature: Test Functionality of Reset Password Link
     Then I should be directed to the password reset page
     And I should see three text fields
 
-  @FPRestTestCase1
+  @FPResetTestCase1 @FPResetValid
   Scenario: TestCase1
-    When I enter a valid email
-    And I enter a valid password
-    And I enter a valid retype password
-    Then I should be directed to the Login Page
+    When I enter a valid email to the email reset field
+    And I enter a valid password to the password reset field
+    And I enter a valid retype password to the retype password reset field
+    
+    When I click Reset Password button
+    Then I should not see any reset password error messages
+    And I should be directed to the Login Page
     
 
-  @FPRestTestCase2
+  @FPResetTestCase2 @FPResetInValid
   Scenario: TestCase2
-    When I enter an invalid email
-    And I enter a valid password
-    And I enter a valid retype password
+    When I enter an invalid email to the email reset field
+    And I enter a valid password to the password reset field
+    And I enter a valid retype password to the retype password reset field
+    
+    When I click Reset Password button
+    Then I should see a popup alert Error Somathing Went Wrong
+    Then I should not be directed to the Login Page
 
-  # Then I should see an error message
-  @FPRestTestCase3
+  @FPResetTestCase3 @FPResetInValid
   Scenario: TestCase3
-    When I enter an invalid email
-    And I enter an invalid password
-    And I enter a valid retype password
+    When I enter an invalid email to the email reset field
+    And I enter an invalid password to the password reset field
+    And I enter a valid retype password to the retype password reset field
+    
+   	And I should see an invalid password message
+    
+		When I click Reset Password button
+    Then I should not be directed to the Login Page
 
-  # Then I should see an error message
-  @FPRestTestCase4
+  @FPResetTestCase4 @FPResetInValid
   Scenario: TestCase4
-    When I enter an invalid email
-    And I enter an invalid password
-    And I enter an invalid retype password
+    When I enter an invalid email to the email reset field
+    And I enter an invalid password to the password reset field
+    And I enter an invalid retype password to the retype password reset field
+    
+   	And I should see an invalid password message
+   	And I should see an invalid retype password message
+    
+		When I click Reset Password button
+    Then I should not be directed to the Login Page
 
-  # Then I should see an error message
-  @FPRestTestCase5
+  @FPResetTestCase5 @FPResetInValid
   Scenario: TestCase5
-    When I enter a valid email
-    And I enter a valid password
-    And I enter an invalid retype password
-
-  # Then I should see an error message
-  @FPRestTestCase6
+    When I enter a valid email to the email reset field
+    And I enter a valid password to the password reset field
+    And I enter an invalid retype password to the retype password reset field
+    
+   	Then I should see an invalid retype password message
+    
+		When I click Reset Password button
+    Then I should not be directed to the Login Page
+    
+  @FPResetTestCase6 @FPResetInValid
   Scenario: TestCase6
-    When I enter a valid email
-    And I enter an invalid password
-    And I enter a valid retype password
+    When I enter a valid email to the email reset field
+    And I enter an invalid password to the password reset field
+    And I enter a valid retype password to the retype password reset field
+    
+    Then I should see an invalid password message
+    
+		When I click Reset Password button
+    Then I should not be directed to the Login Page
 
-  # Then I should see an error message
-  @FPRestTestCase7
+  @FPResetTestCase7 @FPResetInValid
   Scenario: TestCase7
-    When I enter a valid email
-    And I enter an invalid password
-    And I enter an invalid retype password
+    When I enter a valid email to the email reset field
+    And I enter an invalid password to the password reset field
+    And I enter an invalid retype password to the retype password reset field
+    
+    Then I should see an invalid password message
+    And I should see an invalid retype password message
+    
+    When I click Reset Password button
+    Then I should not be directed to the Login Page
 
-  # Then I should see an error message
-  @FPRestTestCase8
+  @FPResetTestCase8 @FPResetInValid
   Scenario: TestCase8
-    When I enter an invalid email
-    And I enter a valid password
-    And I enter an invalid retype password
+    When I enter an invalid email to the email reset field
+    And I enter a valid password to the password reset field
+    And I enter an invalid retype password to the retype password reset field
+    
+    And I should see an invalid retype password message
+    
+    When I click Reset Password button
+    Then I should not be directed to the Login Page

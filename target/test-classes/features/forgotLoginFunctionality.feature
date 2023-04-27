@@ -26,17 +26,25 @@ Feature: Verify Forgot Password Functionality for Crater Invoice App
   @FPFunctionalitytestCase1
   Scenario: User enters an invalid email
     When I enter an invalid email to the rest field
-    Then I see an error message
-
+    Then I should see an error message titled Incorrect Email
+    
   @FPFunctionalitytestCase2
+  Scenario: User enters an empty email
+    When I enter an empty email to the reset field
+    And I click on Send Rest Link button                  
+    Then I should see an error message titled Field is required
+
+  @FPFunctionalitytestCase3
   Scenario: User enters a valid email
     When I enter a valid email to the reset field
     And I click on Send Rest Link button
-    Then I should see a popup alert with a message
-    When I click Back to Login? link
-    Then I should be directed to the Login Page
+    Then I should see a popup alert Success!
+    When I go to gmail.com
+    And I open an email with the subject Rest Password Notification
+    Then I should see an email reset link
+   	
 
-  @FPFunctionalitytestCase3
+  @FPFunctionalitytestCase4
   Scenario: User goes back to Login Page
     When I click Back to Login? link
     Then I should be directed to the Login Page
