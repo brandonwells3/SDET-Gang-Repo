@@ -24,10 +24,16 @@ public class CraterForgotPasswordPage {
 	public WebElement ForgotPasswordBackToLoginLink;
 	
 	@FindBy ( xpath = "//div[@class=\"flex items-start\"]")
-	public WebElement ForgotPasswordMessPopUp;
+	public WebElement ForgotPasswordERRMessPopUp;
+	
+	@FindBy ( xpath = "//p[text()='Success!']")
+	public WebElement ForgotPasswordSUMessPopUp; 
 	
 	@FindBy ( xpath = "//span[text()=\"Incorrect Email.\"]")
 	public WebElement ForgotPasswordIncorrectEmailErrorMess;
+	
+	@FindBy ( xpath = "//span[text()='Field is required']")
+	public WebElement ForgotPasswordFieldRequiredErrorMess;
 	
 	
 	

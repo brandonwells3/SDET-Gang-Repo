@@ -28,17 +28,32 @@ public class forgotLoginFunctionalitySteps {
 		forgotPage = new CraterForgotPasswordPage();
 		utils = new BrowserUtils();
 		utils.actionsSendKeys(forgotPage.ForgotPasswordEnterEmailTextBox, invalidEntry);
-		
-
 	}
-	@Then("I see an error message")
-	public void i_see_an_error_message() {
-		forgotPage = new CraterForgotPasswordPage();
+	
+	@Then("I should see an error message titled Incorrect Email")
+	public void i_should_see_an_error_message_titled_incorrect_email() {
+		utils.waitUntilElementVisible(forgotPage.ForgotPasswordIncorrectEmailErrorMess);
 		Assert.assertTrue(forgotPage.ForgotPasswordIncorrectEmailErrorMess.isDisplayed());
 	}
 	
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////	
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	//Test Case 2 Steps
+	
+	@When("I enter an empty email to the reset field")
+	public void i_enter_an_empty_email_to_the_reset_field() {
+		forgotPage = new CraterForgotPasswordPage();
+		utils = new BrowserUtils();
+		utils.actionsSendKeys(forgotPage.ForgotPasswordEnterEmailTextBox, " ");
+	}
+	
+	@Then("I should see an error message titled Field is required")
+	public void i_should_see_an_error_message_titled_field_is_required() {
+		utils.waitUntilElementVisible(forgotPage.ForgotPasswordFieldRequiredErrorMess);
+		Assert.assertTrue(forgotPage.ForgotPasswordFieldRequiredErrorMess.isDisplayed());
+	}
+	
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////	
+	//Test Case 3 Steps
 	
 	@When("I enter a valid email to the reset field")
 	public void i_enter_a_valid_email_to_the_reset_field() {
@@ -53,15 +68,9 @@ public class forgotLoginFunctionalitySteps {
 		forgotPage.ForgotPasswordSendRestBTN.click();
 		
 	}
-	@Then("I should see a popup alert with a message")
-	public void i_should_see_a_popup_alert_with_a_message() {
-		forgotPage = new CraterForgotPasswordPage();
-		utils.waitUntilElementVisible(forgotPage.ForgotPasswordMessPopUp);
-		Assert.assertTrue(forgotPage.ForgotPasswordMessPopUp.isDisplayed());
-	}
 	
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	//Test Case 3 Steps
+	//Test Case 4 Steps
 	
 	@When("I click Back to Login? link")
 	public void i_click_back_to_login_link() {
@@ -72,6 +81,8 @@ public class forgotLoginFunctionalitySteps {
 	@Then("I should be directed to the Login Page")
 	public void i_should_be_directed_to_the_login_page() {
 		loginPage = new CraterLoginPage();
+		utils = new BrowserUtils();
+		utils.waitUntilElementVisible(loginPage.crateHomePageForgotPasswordLink);
 		Assert.assertTrue(loginPage.crateHomePageForgotPasswordLink.isDisplayed());
 	}
 }
