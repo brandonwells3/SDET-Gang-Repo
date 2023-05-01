@@ -3,11 +3,11 @@
     "line": 20,
     "elements": [
       {
-        "start_timestamp": "2023-04-28T23:41:55.955Z",
+        "start_timestamp": "2023-05-01T17:59:22.016Z",
         "before": [
           {
             "result": {
-              "duration": 1331581300,
+              "duration": 1517679700,
               "status": "passed"
             },
             "match": {
@@ -18,11 +18,11 @@
         "line": 24,
         "name": "Verify UI components",
         "description": "",
-        "id": "verify-add-items-page-ui-components-for;verify-ui-components",
+        "id": "verify-items-page-ui-components-for;verify-ui-components",
         "after": [
           {
             "result": {
-              "duration": 184638000,
+              "duration": 185963400,
               "status": "passed"
             },
             "match": {
@@ -35,7 +35,7 @@
         "steps": [
           {
             "result": {
-              "duration": 2100599700,
+              "duration": 2174326200,
               "status": "passed"
             },
             "line": 25,
@@ -47,7 +47,7 @@
           },
           {
             "result": {
-              "duration": 1840228800,
+              "duration": 1674098200,
               "status": "passed"
             },
             "line": 26,
@@ -59,7 +59,7 @@
           },
           {
             "result": {
-              "duration": 138332700,
+              "duration": 144516500,
               "status": "passed"
             },
             "line": 27,
@@ -71,7 +71,7 @@
           },
           {
             "result": {
-              "duration": 81727400,
+              "duration": 81724700,
               "status": "passed"
             },
             "line": 28,
@@ -83,7 +83,7 @@
           },
           {
             "result": {
-              "duration": 1650870000,
+              "duration": 1632597200,
               "status": "passed"
             },
             "line": 29,
@@ -95,7 +95,7 @@
           },
           {
             "result": {
-              "duration": 37911900,
+              "duration": 40562000,
               "status": "passed"
             },
             "line": 30,
@@ -107,19 +107,31 @@
           },
           {
             "result": {
-              "duration": 57764300,
+              "duration": 146506900,
               "status": "passed"
             },
-            "line": 32,
-            "name": "I see Pagination text as follow: Showing 1 to 10 of itemTotal results",
+            "line": 31,
+            "name": "I should see a table with four headers",
             "match": {
-              "location": "step_definitions.CreateItemUIComponentsSteps.i_see_pagination_text_as_follow_showing_1_to_10_of_total_results()"
+              "location": "step_definitions.CreateItemUIComponentsSteps.i_should_see_a_table_with_four_headers()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 61785600,
+              "duration": 58801700,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "I see Pagination text as follow: Showing 1 to 10 of itemTotal results",
+            "match": {
+              "location": "step_definitions.CreateItemUIComponentsSteps.i_see_pagination_text_as_follow_showing_1_to_10_of_itemtotal_results()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 56800400,
               "status": "passed"
             },
             "line": 33,
@@ -131,7 +143,7 @@
           },
           {
             "result": {
-              "duration": 59798700,
+              "duration": 54825000,
               "status": "passed"
             },
             "line": 34,
@@ -143,7 +155,7 @@
           },
           {
             "result": {
-              "duration": 196910600,
+              "duration": 181676000,
               "status": "passed"
             },
             "line": 36,
@@ -155,7 +167,7 @@
           },
           {
             "result": {
-              "duration": 41860800,
+              "duration": 47836600,
               "status": "passed"
             },
             "line": 37,
@@ -167,7 +179,7 @@
           },
           {
             "result": {
-              "duration": 193351500,
+              "duration": 186826100,
               "status": "passed"
             },
             "line": 39,
@@ -179,7 +191,7 @@
           },
           {
             "result": {
-              "duration": 52824100,
+              "duration": 50831800,
               "status": "passed"
             },
             "line": 40,
@@ -200,9 +212,9 @@
         ]
       }
     ],
-    "name": "Verify Add Items Page UI components for",
+    "name": "Verify Items Page UI components for",
     "description": "\t\t\t\t Crater Invoice App",
-    "id": "verify-add-items-page-ui-components-for",
+    "id": "verify-items-page-ui-components-for",
     "keyword": "Feature",
     "uri": "file:src/test/resources/features/CreateItemUIComponents.feature",
     "tags": [

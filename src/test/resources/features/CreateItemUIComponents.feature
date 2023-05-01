@@ -17,7 +17,7 @@
 ## (Comments)
 #Sample Feature Definition Template
 @createItemUIComponentValidation
-Feature: Verify Add Items Page UI components for 
+Feature: Verify Items Page UI components for 
 				 Crater Invoice App
 
   @createItemUIComponentValidation
@@ -28,7 +28,7 @@ Feature: Verify Add Items Page UI components for
     And I should see the menu navigation paths as Home / Items placed under Items
     And I should see a button labeled Filter
     And I should see a button labeled + Add Item
-   	# And I should see a table with 5 columns
+   	And I should see a table with four headers
    	And I see Pagination text as follow: Showing 1 to 10 of itemTotal results
 		And I should see Left and Right Arrows allowing user to navigate to previous and next pages 
 		And I should see number indicating the page the user is currently on and the next upcoming page

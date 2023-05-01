@@ -29,8 +29,8 @@ public class CraterItemsPage {
 	@FindBy ( xpath = "//button[text()=' Add Item']")
 	public WebElement itemsPageAddItemBTN;
 	
-	@FindBy ( xpath = "")
-	public WebElement itemsPageSelectAllCheckBox;
+//	@FindBy ( xpath = "")
+//	public WebElement itemsPageSelectAllCheckBox;
 	
 	@FindBy ( xpath = "//th[text()='Name ']")
 	public WebElement itemsPageNameColumn;

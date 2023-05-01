@@ -66,8 +66,23 @@ public class CreateItemUIComponentsSteps {
 		Assert.assertTrue(itemsPage.itemsPageAddItemBTN.isDisplayed());
 	}
 	
+	@Then("I should see a table with four headers")
+	public void i_should_see_a_table_with_four_headers() {
+		utils.waitUntilElementVisible(itemsPage.itemsPageNameColumn);
+		Assert.assertTrue(itemsPage.itemsPageNameColumn.isDisplayed());
+		
+		utils.waitUntilElementVisible(itemsPage.itemsPageUnitColumn);
+		Assert.assertTrue(itemsPage.itemsPageUnitColumn.isDisplayed());
+		
+		utils.waitUntilElementVisible(itemsPage.itemsPagePriceColumn);
+		Assert.assertTrue(itemsPage.itemsPagePriceColumn.isDisplayed());
+		
+		utils.waitUntilElementVisible(itemsPage.itemsPageAddedOnColumn);
+		Assert.assertTrue(itemsPage.itemsPageAddedOnColumn.isDisplayed());
+	}
+	
 	@Then("I see Pagination text as follow: Showing 1 to 10 of itemTotal results")
-	public void i_see_pagination_text_as_follow_showing_1_to_10_of_total_results() {
+	public void i_see_pagination_text_as_follow_showing_1_to_10_of_itemtotal_results() {
 		utils.waitUntilElementVisible(itemsPage.itemsPagePagination);
 		Assert.assertEquals(itemsPage.itemsPagePagination.getText(), "Showing 1 to 10 of "+itemsPage.itemsPageCurrentTotal.getText()+" results");
 	}
