@@ -1,9 +1,11 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utilities.BrowserUtils;
 import utilities.Driver;
 
 public class CraterItemsPage {
@@ -11,9 +13,42 @@ public class CraterItemsPage {
 	public CraterItemsPage() {
 		PageFactory.initElements(Driver.getDriver(), this);
 		
-	}																		//AC 1 - 
-																			//			5.)*** column link
-																			//          1.) Select all checkbox
+	}																		
+	BrowserUtils utils;
+	
+	
+	
+	public void createAnIteam(String itemName, String itemPrice, String itemUnit, String itemDescription) throws InterruptedException {
+		utils = new BrowserUtils();
+		
+		utils.waitUntilElementVisible(itemsPageNewItemNameTextField);
+		utils.actionsSendKeys(itemsPageNewItemNameTextField, itemName);
+		Thread.sleep(1000);
+		
+		utils.waitUntilElementVisible(itemsPageNewItemPriceField);
+		utils.actionsSendKeys(itemsPageNewItemPriceField, itemPrice);
+		Thread.sleep(1000);
+		
+		utils.waitUntilElementVisible(itemsPageNewItemUnitField);
+		utils.actionsClick(itemsPageNewItemUnitField);
+		Thread.sleep(1000);
+		utils.actionsClick(Driver.getDriver().findElement(By.xpath("//span[text()='"+itemUnit+"']")));
+		
+		utils.waitUntilElementVisible(itemsPageNewItemDescriptionField);
+		utils.actionsSendKeys(itemsPageNewItemDescriptionField, itemDescription);
+		Thread.sleep(1000);
+	}
+	
+	public void findTheItem(String itemSpecialName) {
+		utils = new BrowserUtils();
+		utils.waitUntilElementToBeClickable(itemsPageFilterBTN);
+		utils.actionsClick(itemsPageFilterBTN);
+		utils.actionsSendKeys(itemsPageFilterBTNNameField, itemSpecialName);
+	}
+																		
+	
+	
+	
 	@FindBy ( xpath = "//h3[text()='Items']")
 	public WebElement itemsPageHeaderText;
 	
@@ -25,6 +60,9 @@ public class CraterItemsPage {
 	
 	@FindBy ( xpath = "//button[text()='Filter ']")
 	public WebElement itemsPageFilterBTN;
+	
+	@FindBy ( xpath = "//input[@name='name']")
+	public WebElement itemsPageFilterBTNNameField;
 	
 	@FindBy ( xpath = "//button[text()=' Add Item']")
 	public WebElement itemsPageAddItemBTN;
@@ -69,6 +107,28 @@ public class CraterItemsPage {
 	@FindBy ( xpath = "//nav//a[contains(@class,'disabled')]")
 	public WebElement itemsPageDisabledNavButton;
 	
+	@FindBy ( xpath = "//h3[text()='New Item']")
+	public WebElement itemsPageNewItemHeaderText;
 	
+	@FindBy ( xpath = "//div[text()='Name ']//parent::label//following-sibling::div//div//input")
+	public WebElement itemsPageNewItemNameTextField;
+	
+	@FindBy ( xpath = "//input[@id='0']")
+	public WebElement itemsPageNewItemPriceField;
+	
+	@FindBy ( xpath = "//div[text()='Unit ']//parent::label//following-sibling::div//div//input")
+	public WebElement itemsPageNewItemUnitField;
+	
+	@FindBy ( name = "description")
+	public WebElement itemsPageNewItemDescriptionField;
+	
+	@FindBy ( xpath = "//button[text()=' Save Item']")
+	public WebElement itemsPageNewItemSaveItemBTN;
+	
+	@FindBy ( xpath = "//p[text()='Success!']")
+	public WebElement itemsPageNewItemSuccessPopUpMess;
+	
+	@FindBy ( xpath = "//div[@class='p-4']//div//div//following-sibling::div[@class='flex shrink-0']")
+	public WebElement itemsPageNewItemSuccessXBTN;
 	
 }
