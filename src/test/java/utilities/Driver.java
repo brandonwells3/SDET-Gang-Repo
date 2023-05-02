@@ -10,8 +10,7 @@ public class Driver {
 	
 	public static WebDriver getDriver() {
 		
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\Samue\\PrimeTechJavaClass\\SeleniumTools\\ChromeDriver\\chromedriver_win32\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "/Users/irina/Desktop/SeleniumTools/chromeDriver/chromedriver_mac_arm64/chromedriver");
 		
 		if(driver == null) {
 			driver = new ChromeDriver();

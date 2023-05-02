@@ -34,6 +34,32 @@ public class CraterLoginPage {
 	@FindBy ( xpath = "//button[text()='Login']")
 	public WebElement craterLoginLoginButton;
 	
+
+	@FindBy ( xpath = "//*[local-name()='svg']")
+	public WebElement craterTitle;
+	
+	@FindBy (xpath = "//div[text() ='Email ']")
+	public WebElement lableEmail;
+	
+//	@FindBy (xpath = "//span[text() =' * ']")
+//	public WebElement emailAsterisk;
+	
+	@FindBy (xpath = "//div[text()='Password ']")
+	public WebElement lablePassword;
+	
+//	@FindBy (xpath = "//button[text()='Login']")
+//	public WebElement loginButton;
+	
+	@FindBy (xpath ="//p[contains(text(), 'Copyright @ Crater Invoice, Inc. 2023')]")
+	public WebElement textAreaOnButtomLeft;
+	
+	@FindBy (xpath = "//h1[contains(text(), 'Simple Invoicing for Individuals Small Businesses')]")
+	public WebElement firstHeading;
+	
+	@FindBy (xpath = "//p[contains(text(), 'Crater helps you track expenses, record payments & generate beautiful invoices & estimates.')]")
+	public WebElement secondHeading;
+	
+	
 	public void login() {
 		utils = new BrowserUtils();
 		utils.waitUntilElementVisible(craterLoginEmailField);
