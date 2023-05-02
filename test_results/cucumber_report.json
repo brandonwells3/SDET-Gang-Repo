@@ -1,13 +1,13 @@
 [
   {
-    "line": 20,
+    "line": 2,
     "elements": [
       {
-        "start_timestamp": "2023-05-01T23:44:48.184Z",
+        "start_timestamp": "2023-05-02T16:03:07.798Z",
         "before": [
           {
             "result": {
-              "duration": 1309224400,
+              "duration": 6002219000,
               "status": "passed"
             },
             "match": {
@@ -15,14 +15,14 @@
             }
           }
         ],
-        "line": 23,
-        "name": "User entereds Valid values to the data fields and wait for success message to disapear",
+        "line": 5,
+        "name": "Verify UI Components",
         "description": "",
-        "id": "verify-add-new-item---succeful;user-entereds-valid-values-to-the-data-fields-and-wait-for-success-message-to-disapear",
+        "id": "verify-ui-components-of-login-page-for-crater-app.;verify-ui-components",
         "after": [
           {
             "result": {
-              "duration": 268727300,
+              "duration": 81383000,
               "status": "passed"
             },
             "match": {
@@ -35,391 +35,182 @@
         "steps": [
           {
             "result": {
-              "duration": 2423890000,
+              "duration": 5792067000,
               "status": "passed"
             },
-            "line": 24,
-            "name": "As an entity user, I am logged in",
+            "line": 6,
+            "name": "As a user, I am on the Login Page of crater App.",
             "match": {
-              "location": "step_definitions.CreateItemUIComponentsSteps.as_an_entity_user_i_am_logged_in()"
+              "location": "step_definitions.LoginUIComponents.as_a_user_i_am_on_the_login_page_of_crater_app()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 1705492200,
+              "duration": 488938000,
               "status": "passed"
             },
-            "line": 25,
-            "name": "I click on the Items Menu link",
-            "match": {
-              "location": "step_definitions.CreateItemUIComponentsSteps.i_click_on_the_items_menu_link()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 151494400,
-              "status": "passed"
-            },
-            "line": 26,
-            "name": "I should see a page titled Items",
-            "match": {
-              "location": "step_definitions.CreateItemUIComponentsSteps.i_should_see_a_page_titled_items()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 196343400,
-              "status": "passed"
-            },
-            "line": 27,
-            "name": "I click + Add Item button",
-            "match": {
-              "location": "step_definitions.CreateItemAddNewItemSuccessfulSteps.i_click_add_item_button()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 138536900,
-              "status": "passed"
-            },
-            "line": 28,
-            "name": "I should see a page titled New Item",
-            "match": {
-              "location": "step_definitions.CreateItemAddNewItemSuccessfulSteps.i_should_see_a_page_titled_new_item()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 7046399700,
-              "status": "passed"
-            },
-            "line": 29,
-            "name": "I provide valid item information name \"popsicle\", price \"199\", unit \"Dollars\", and description \"A cold Treat\"",
+            "line": 7,
+            "name": "I should see Page Title \"crater\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"popsicle\"",
-                  "offset": 38
-                },
-                {
-                  "val": "\"199\"",
-                  "offset": 56
-                },
-                {
-                  "val": "\"Dollars\"",
-                  "offset": 68
-                },
-                {
-                  "val": "\"A cold Treat\"",
-                  "offset": 95
+                  "val": "\"crater\"",
+                  "offset": 24
                 }
               ],
-              "location": "step_definitions.CreateItemAddNewItemSuccessfulSteps.i_provide_valid_item_information_name_price_unit_and_description(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 1044526300,
-              "status": "passed"
-            },
-            "line": 30,
-            "name": "I should see a Success! popup message with a close button to the right",
-            "match": {
-              "location": "step_definitions.CreateItemAddNewItemSuccessfulSteps.i_should_see_a_success_popup_message_with_a_close_button_to_the_right()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 11190029600,
-              "status": "passed"
-            },
-            "line": 31,
-            "name": "The flash message should disapear within five seconds or less",
-            "match": {
-              "location": "step_definitions.CreateItemAddNewItemSuccessfulSteps.the_flash_message_should_disapear_within_five_seconds_or_less()"
+              "location": "step_definitions.LoginUIComponents.i_should_see_page_title(java.lang.String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 33890500,
+              "duration": 28837000,
               "status": "passed"
             },
-            "line": 32,
-            "name": "I should be directed to the Items Page",
+            "line": 8,
+            "name": "I should be able to see a Text Box with the Label \"Email *\"",
             "match": {
-              "location": "step_definitions.CreateItemAddNewItemSuccessfulSteps.i_should_be_directed_to_the_items_page()"
+              "arguments": [
+                {
+                  "val": "\"Email *\"",
+                  "offset": 50
+                }
+              ],
+              "location": "step_definitions.LoginUIComponents.i_should_be_able_to_see_a_text_box_with_the_label(java.lang.String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 49843200,
+              "duration": 646168000,
               "status": "passed"
             },
-            "line": 33,
-            "name": "I should see a button labeled Filter",
+            "line": 9,
+            "name": "I sholud see a Text Box with the lable \"Password*\"",
             "match": {
-              "location": "step_definitions.CreateItemUIComponentsSteps.i_should_see_a_button_labeled_filter()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 409383900,
-              "status": "passed"
-            },
-            "line": 34,
-            "name": "I should see the new item added in the items table",
-            "match": {
-              "location": "step_definitions.CreateItemAddNewItemSuccessfulSteps.i_should_see_the_new_item_added_in_the_items_table()"
+              "arguments": [
+                {
+                  "val": "\"Password*\"",
+                  "offset": 39
+                }
+              ],
+              "location": "step_definitions.LoginUIComponents.i_sholud_see_a_text_box_with_the_lable(java.lang.String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 9961100,
+              "duration": 23980000,
               "status": "passed"
             },
-            "line": 35,
-            "name": "I should see the new item in database",
+            "line": 10,
+            "name": "I should see a link titled \"Forgot Passowrd?\"",
             "match": {
-              "location": "step_definitions.CreateItemAddNewItemSuccessfulSteps.i_should_see_the_new_item_in_database()"
+              "arguments": [
+                {
+                  "val": "\"Forgot Passowrd?\"",
+                  "offset": 27
+                }
+              ],
+              "location": "step_definitions.LoginUIComponents.i_should_see_a_link_titled(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 23660000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I should see a primary button labled \"Login\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Login\"",
+                  "offset": 37
+                }
+              ],
+              "location": "step_definitions.LoginUIComponents.i_should_see_a_primary_button_labled(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 24595000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I should see a Text area on the bottom left \"Copyright @ Crater Invoice, Inc. 2023\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Copyright @ Crater Invoice, Inc. 2023\"",
+                  "offset": 44
+                }
+              ],
+              "location": "step_definitions.LoginUIComponents.i_should_see_a_text_area_on_the_bottom_left(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 18811000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I should see the first Heading with the following text \"Simple Invoicing for Individuals Small Businesses\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Simple Invoicing for Individuals Small Businesses\"",
+                  "offset": 55
+                }
+              ],
+              "location": "step_definitions.LoginUIComponents.i_should_see_the_first_heading_with_the_following_text(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 18235000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "I should see the second Heading \"Crater helps you track expenses, record payments \u0026 generate beautiful invoices \u0026 estimates.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Crater helps you track expenses, record payments \u0026 generate beautiful invoices \u0026 estimates.\"",
+                  "offset": 32
+                }
+              ],
+              "location": "step_definitions.LoginUIComponents.i_should_see_the_second_heading(java.lang.String)"
             },
             "keyword": "And "
           }
         ],
         "tags": [
           {
-            "name": "@createItemAddNewSuccessful"
+            "name": "@LoginUIComponentsValidation"
           },
           {
-            "name": "@createItemAddNewSuccessfulWaitForMessDisapearance"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2023-05-01T23:45:14.271Z",
-        "before": [
-          {
-            "result": {
-              "duration": 945755000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "step_definitions.CommonHooks.setup()"
-            }
-          }
-        ],
-        "line": 38,
-        "name": "User entereds Valid values to the data fields and close success message",
-        "description": "",
-        "id": "verify-add-new-item---succeful;user-entereds-valid-values-to-the-data-fields-and-close-success-message",
-        "after": [
-          {
-            "result": {
-              "duration": 202735000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "step_definitions.CommonHooks.tearDown()"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 2065266200,
-              "status": "passed"
-            },
-            "line": 39,
-            "name": "As an entity user, I am logged in",
-            "match": {
-              "location": "step_definitions.CreateItemUIComponentsSteps.as_an_entity_user_i_am_logged_in()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 1704148800,
-              "status": "passed"
-            },
-            "line": 40,
-            "name": "I click on the Items Menu link",
-            "match": {
-              "location": "step_definitions.CreateItemUIComponentsSteps.i_click_on_the_items_menu_link()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 115612400,
-              "status": "passed"
-            },
-            "line": 41,
-            "name": "I should see a page titled Items",
-            "match": {
-              "location": "step_definitions.CreateItemUIComponentsSteps.i_should_see_a_page_titled_items()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 194997000,
-              "status": "passed"
-            },
-            "line": 42,
-            "name": "I click + Add Item button",
-            "match": {
-              "location": "step_definitions.CreateItemAddNewItemSuccessfulSteps.i_click_add_item_button()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 109558300,
-              "status": "passed"
-            },
-            "line": 43,
-            "name": "I should see a page titled New Item",
-            "match": {
-              "location": "step_definitions.CreateItemAddNewItemSuccessfulSteps.i_should_see_a_page_titled_new_item()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 7458498200,
-              "status": "passed"
-            },
-            "line": 44,
-            "name": "I provide valid item information name \"popsicle\", price \"199\", unit \"Dollars\", and description \"A cold Treat\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"popsicle\"",
-                  "offset": 38
-                },
-                {
-                  "val": "\"199\"",
-                  "offset": 56
-                },
-                {
-                  "val": "\"Dollars\"",
-                  "offset": 68
-                },
-                {
-                  "val": "\"A cold Treat\"",
-                  "offset": 95
-                }
-              ],
-              "location": "step_definitions.CreateItemAddNewItemSuccessfulSteps.i_provide_valid_item_information_name_price_unit_and_description(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 1022106100,
-              "status": "passed"
-            },
-            "line": 45,
-            "name": "I should see a Success! popup message with a close button to the right",
-            "match": {
-              "location": "step_definitions.CreateItemAddNewItemSuccessfulSteps.i_should_see_a_success_popup_message_with_a_close_button_to_the_right()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 173442800,
-              "status": "passed"
-            },
-            "line": 46,
-            "name": "I click the X next on the right side of success message",
-            "match": {
-              "location": "step_definitions.CreateItemAddNewItemSuccessfulSteps.i_click_the_x_next_on_the_right_side_of_success_message()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 46743400,
-              "status": "passed"
-            },
-            "line": 47,
-            "name": "I should be directed to the Items Page",
-            "match": {
-              "location": "step_definitions.CreateItemAddNewItemSuccessfulSteps.i_should_be_directed_to_the_items_page()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 51829300,
-              "status": "passed"
-            },
-            "line": 48,
-            "name": "I should see a button labeled Filter",
-            "match": {
-              "location": "step_definitions.CreateItemUIComponentsSteps.i_should_see_a_button_labeled_filter()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 829599000,
-              "status": "passed"
-            },
-            "line": 49,
-            "name": "I should see the new item added in the items table",
-            "match": {
-              "location": "step_definitions.CreateItemAddNewItemSuccessfulSteps.i_should_see_the_new_item_added_in_the_items_table()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 992700,
-              "status": "passed"
-            },
-            "line": 50,
-            "name": "I should see the new item in database",
-            "match": {
-              "location": "step_definitions.CreateItemAddNewItemSuccessfulSteps.i_should_see_the_new_item_in_database()"
-            },
-            "keyword": "And "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@createItemAddNewSuccessful"
-          },
-          {
-            "name": "@createItemAddNewSuccessfulClickXBTN"
+            "name": "@LoginUIComponents"
           }
         ]
       }
     ],
-    "name": "Verify Add New Item - Succeful",
+    "name": "Verify UI Components of Login page for Crater App.",
     "description": "",
-    "id": "verify-add-new-item---succeful",
+    "id": "verify-ui-components-of-login-page-for-crater-app.",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/CreateItemAddNewItemSuccessfull.feature",
+    "uri": "file:src/test/resources/features/LoginUIComponents.feature",
     "tags": [
       {
-        "name": "@createItemAddNewSuccessful",
+        "name": "@LoginUIComponentsValidation",
         "type": "Tag",
         "location": {
-          "line": 19,
+          "line": 1,
           "column": 1
         }
       }
