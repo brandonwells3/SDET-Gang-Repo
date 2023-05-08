@@ -47,10 +47,7 @@ public class CraterLoginPage {
 	@FindBy (xpath = "//div[text()='Password ']")
 	public WebElement lablePassword;
 	
-//	@FindBy (xpath = "//button[text()='Login']")
-//	public WebElement loginButton;
-	
-	@FindBy (xpath ="//p[contains(text(), 'Copyright @ Crater Invoice, Inc. 2023')]")
+   @FindBy (xpath ="//p[contains(text(), 'Copyright @ Crater Invoice, Inc. 2023')]")
 	public WebElement textAreaOnButtomLeft;
 	
 	@FindBy (xpath = "//h1[contains(text(), 'Simple Invoicing for Individuals Small Businesses')]")
@@ -59,14 +56,22 @@ public class CraterLoginPage {
 	@FindBy (xpath = "//p[contains(text(), 'Crater helps you track expenses, record payments & generate beautiful invoices & estimates.')]")
 	public WebElement secondHeading;
 	
+	@FindBy (xpath = "//h6[text()='Account Settings']")
+	public WebElement accountSettingsHeader;
+	
+	@FindBy (xpath = "//p[text()='These credentials do not match our records.']")
+	public WebElement invalidLoginErrorMessage;
+	
+	@FindBy (xpath = "//span[text()='Field is required']")
+	public WebElement fieldIsRequiredMessage;
 	
 	public void login() {
 		utils = new BrowserUtils();
 		utils.waitUntilElementVisible(craterLoginEmailField);
-		utils.actionsSendKeys(craterLoginEmailField, DataReader.getProperty("testUser1"));
+		utils.actionsSendKeys(craterLoginEmailField, DataReader.getProperty("email"));
 		System.out.println("Email has been entered");
 		
-		utils.actionsSendKeys(craterLoginPassField, DataReader.getProperty("testPass1"));
+		utils.actionsSendKeys(craterLoginPassField, DataReader.getProperty("password"));
 		System.out.println("Password has been entered");
 		
 		utils.waitUntilElementToBeClickable(craterLoginLoginButton);
