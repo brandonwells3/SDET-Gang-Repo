@@ -5,7 +5,6 @@ import org.junit.Assert;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import pages.CraterForgotPasswordPage;
 import pages.CraterLoginPage;
 import utilities.BrowserUtils;
 import utilities.DataReader;

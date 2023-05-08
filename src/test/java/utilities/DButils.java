@@ -12,7 +12,7 @@ import java.util.List;
 public class DButils {
 	
 
-	private static String dbHostName = DataReader.getProperty("dbhosturl");
+	private static String dbHostName = DataReader.getProperty("dbhostUrl");
 	private static String username = DataReader.getProperty("dbusername");
 	private static String password = DataReader.getProperty("dbpassword");
 	
