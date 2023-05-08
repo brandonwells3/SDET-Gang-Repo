@@ -10,6 +10,7 @@ import io.cucumber.java.en.When;
 import pages.CraterItemsPage;
 import utilities.BrowserUtils;
 import utilities.DButils;
+import utilities.DataReader;
 import utilities.Driver;
 
 public class CreateItemAddNewItemSuccessfulSteps {
@@ -19,10 +20,10 @@ public class CreateItemAddNewItemSuccessfulSteps {
 	BrowserUtils utils;
 	DButils dbutils;
 	
-	static String itemNewName;
-	static double timeStart;
-	static double timeStop;
-	
+	static String itemNewName;	
+	static String itemPrice;
+	static String itemUnit;
+	static String itemDescription;
 	
 	
 	@When("I click + Add Item button")
@@ -44,6 +45,9 @@ public class CreateItemAddNewItemSuccessfulSteps {
 	@When("I provide valid item information name {string}, price {string}, unit {string}, and description {string}")
 	public void i_provide_valid_item_information_name_price_unit_and_description(String name, String price, String unit, String description) throws InterruptedException {
 		itemNewName = name + utils.randonNumber();
+		itemPrice = price;
+		itemUnit = unit;
+		itemDescription = description;
 		itemsPage.createAnIteam(itemNewName, price, unit, description);
 		utils.actionsClick(itemsPage.itemsPageNewItemSaveItemBTN);
 	}
@@ -65,26 +69,24 @@ public class CreateItemAddNewItemSuccessfulSteps {
 		try {	
 		try {
 		try {
-			Assert.assertFalse(itemsPage.itemsPageNewItemSuccessPopUpMess.isDisplayed());
+			Assert.assertFalse("Error", itemsPage.itemsPageNewItemSuccessPopUpMess.isDisplayed());
 		}catch(java.lang.AssertionError e) {
 			Thread.sleep(3000);
-			Assert.assertFalse(itemsPage.itemsPageNewItemSuccessPopUpMess.isDisplayed());
+			Assert.assertFalse("Error", itemsPage.itemsPageNewItemSuccessPopUpMess.isDisplayed());
 			System.out.println("3 sec");
 		}
 		}catch(java.lang.AssertionError e) {
 			Thread.sleep(1000);
-			Assert.assertFalse(itemsPage.itemsPageNewItemSuccessPopUpMess.isDisplayed());
+			Assert.assertFalse("Error", itemsPage.itemsPageNewItemSuccessPopUpMess.isDisplayed());
 			System.out.println("4 sec");
 		}
 		}catch(java.lang.AssertionError e) {
 			Thread.sleep(1000);
-			Assert.assertFalse(itemsPage.itemsPageNewItemSuccessPopUpMess.isDisplayed());
+			Assert.assertFalse("Error", itemsPage.itemsPageNewItemSuccessPopUpMess.isDisplayed());
 			System.out.println("5 sec");
 		}
 		}catch(org.openqa.selenium.NoSuchElementException e) {
-			Thread.sleep(1000);
-			System.out.println("Element does not exist");
-			System.out.println("6 sec");
+			System.out.println("Element no longer present");
 		}
 	}
 	
@@ -105,13 +107,14 @@ public class CreateItemAddNewItemSuccessfulSteps {
 		dbutils = new DButils();
 		String query = "SELECT name, price, unit_id, description FROM items where name='"+itemNewName+"';";
 		System.out.println(query);
+		System.out.println(DataReader.getProperty("dbhostUrl"));
 		List<String> itemInfo = dbutils.selectArecord(query);
 		for (String string : itemInfo) {
 			System.out.println(string);
 		}
-		
-		
-		
-		
+		Assert.assertEquals(itemNewName, itemInfo.get(0));
+		Assert.assertEquals(itemPrice, itemInfo.get(1));
+		Assert.assertEquals(itemInfo.get(2), "23");
+		Assert.assertEquals(itemDescription, itemInfo.get(3));
 	}
 }

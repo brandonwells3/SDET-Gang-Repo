@@ -1,34 +1,13 @@
 [
   {
-    "line": 4,
+    "line": 20,
     "elements": [
       {
-        "line": 7,
-        "name": "",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 6849499000,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "As a user, I am on the login page",
-            "match": {
-              "location": "step_definitions.ValidateLoginFunctionality.as_a_user_i_am_on_the_login_page()"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2023-05-03T17:21:32.271Z",
+        "start_timestamp": "2023-05-08T18:59:03.867Z",
         "before": [
           {
             "result": {
-              "duration": 5560088000,
+              "duration": 1481120700,
               "status": "passed"
             },
             "match": {
@@ -36,14 +15,14 @@
             }
           }
         ],
-        "line": 32,
-        "name": "Invalid email and password login",
+        "line": 23,
+        "name": "User entereds Valid values to the data fields and wait for success message to disapear",
         "description": "",
-        "id": "verify-login-functionality-for-crater-app.;invalid-email-and-password-login;;2",
+        "id": "verify-add-new-item---succeful;user-entereds-valid-values-to-the-data-fields-and-wait-for-success-message-to-disapear",
         "after": [
           {
             "result": {
-              "duration": 81848000,
+              "duration": 198768600,
               "status": "passed"
             },
             "match": {
@@ -52,106 +31,193 @@
           }
         ],
         "type": "scenario",
-        "keyword": "Scenario Outline",
+        "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 1857936000,
+              "duration": 2531197000,
               "status": "passed"
             },
             "line": 24,
-            "name": "User enters invalid \"entitymin@primetechschool.com\" and invalid \"primech@school\"",
+            "name": "As an entity user, I am logged in",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"entitymin@primetechschool.com\"",
-                  "offset": 20
-                },
-                {
-                  "val": "\"primech@school\"",
-                  "offset": 64
-                }
-              ],
-              "location": "step_definitions.ValidateLoginFunctionality.user_enters_invalid_and_invalid(java.lang.String,java.lang.String)"
+              "location": "step_definitions.CreateItemUIComponentsSteps.as_an_entity_user_i_am_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1719793000,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "I click on the Items Menu link",
+            "match": {
+              "location": "step_definitions.CreateItemUIComponentsSteps.i_click_on_the_items_menu_link()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 549297000,
-              "status": "passed"
-            },
-            "line": 25,
-            "name": "User click on login button",
-            "match": {
-              "location": "step_definitions.ValidateLoginFunctionality.user_click_on_login_button()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 1059086000,
+              "duration": 149498900,
               "status": "passed"
             },
             "line": 26,
-            "name": "User should see an error message \"Error Those credentials do not match our records.\"",
+            "name": "I should see a page titled Items",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"Error Those credentials do not match our records.\"",
-                  "offset": 33
-                }
-              ],
-              "location": "step_definitions.ValidateLoginFunctionality.user_should_see_an_error_message(java.lang.String)"
+              "location": "step_definitions.CreateItemUIComponentsSteps.i_should_see_a_page_titled_items()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 25248000,
+              "duration": 222887400,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "I click + Add Item button",
+            "match": {
+              "location": "step_definitions.CreateItemAddNewItemSuccessfulSteps.i_click_add_item_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 115427600,
               "status": "passed"
             },
             "line": 28,
-            "name": "User should not be logged in",
+            "name": "I should see a page titled New Item",
             "match": {
-              "location": "step_definitions.ValidateLoginFunctionality.user_should_not_be_logged_in()"
+              "location": "step_definitions.CreateItemAddNewItemSuccessfulSteps.i_should_see_a_page_titled_new_item()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 7141978300,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "I provide valid item information name \"popsicle\", price \"199\", unit \"Dollars\", and description \"A cold Treat\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"popsicle\"",
+                  "offset": 38
+                },
+                {
+                  "val": "\"199\"",
+                  "offset": 56
+                },
+                {
+                  "val": "\"Dollars\"",
+                  "offset": 68
+                },
+                {
+                  "val": "\"A cold Treat\"",
+                  "offset": 95
+                }
+              ],
+              "location": "step_definitions.CreateItemAddNewItemSuccessfulSteps.i_provide_valid_item_information_name_price_unit_and_description(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 973065900,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "I should see a Success! popup message with a close button to the right",
+            "match": {
+              "location": "step_definitions.CreateItemAddNewItemSuccessfulSteps.i_should_see_a_success_popup_message_with_a_close_button_to_the_right()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10148160100,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "The flash message should disapear within five seconds or less",
+            "match": {
+              "location": "step_definitions.CreateItemAddNewItemSuccessfulSteps.the_flash_message_should_disapear_within_five_seconds_or_less()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 53820400,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "I should be directed to the Items Page",
+            "match": {
+              "location": "step_definitions.CreateItemAddNewItemSuccessfulSteps.i_should_be_directed_to_the_items_page()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 44907400,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "I should see a button labeled Filter",
+            "match": {
+              "location": "step_definitions.CreateItemUIComponentsSteps.i_should_see_a_button_labeled_filter()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 384392000,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "I should see the new item added in the items table",
+            "match": {
+              "location": "step_definitions.CreateItemAddNewItemSuccessfulSteps.i_should_see_the_new_item_added_in_the_items_table()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 648650300,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "I should see the new item in database",
+            "match": {
+              "location": "step_definitions.CreateItemAddNewItemSuccessfulSteps.i_should_see_the_new_item_in_database()"
             },
             "keyword": "And "
           }
         ],
         "tags": [
           {
-            "name": "@login"
+            "name": "@createItemAddNewSuccessful"
           },
           {
-            "name": "@regression"
-          },
-          {
-            "name": "@invalidLogin"
+            "name": "@createItemAddNewSuccessfulWaitForMessDisapearance"
           }
         ]
       }
     ],
-    "name": "Verify Login functionality for Crater app.",
-    "description": "  User with valid credentials, should be able to Login sucesfully on Crater app.",
-    "id": "verify-login-functionality-for-crater-app.",
+    "name": "Verify Add New Item - Succeful",
+    "description": "",
+    "id": "verify-add-new-item---succeful",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/ValidateLoginFunctionality.feature",
+    "uri": "file:src/test/resources/features/CreateItemAddNewItemSuccessfull.feature",
     "tags": [
       {
-        "name": "@login",
+        "name": "@createItemAddNewSuccessful",
         "type": "Tag",
         "location": {
-          "line": 3,
+          "line": 19,
           "column": 1
-        }
-      },
-      {
-        "name": "@regression",
-        "type": "Tag",
-        "location": {
-          "line": 3,
-          "column": 8
         }
       }
     ]

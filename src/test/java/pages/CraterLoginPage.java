@@ -68,10 +68,10 @@ public class CraterLoginPage {
 	public void login() {
 		utils = new BrowserUtils();
 		utils.waitUntilElementVisible(craterLoginEmailField);
-		utils.actionsSendKeys(craterLoginEmailField, DataReader.getProperty("email"));
+		utils.actionsSendKeys(craterLoginEmailField, DataReader.getProperty("testUser1"));
 		System.out.println("Email has been entered");
 		
-		utils.actionsSendKeys(craterLoginPassField, DataReader.getProperty("password"));
+		utils.actionsSendKeys(craterLoginPassField, DataReader.getProperty("testPass1"));
 		System.out.println("Password has been entered");
 		
 		utils.waitUntilElementToBeClickable(craterLoginLoginButton);
