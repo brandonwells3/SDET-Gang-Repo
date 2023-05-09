@@ -23,8 +23,9 @@ Feature: Verify Login functionality for Crater app.
   Scenario Outline: Invalid email and password login
     When User enters invalid "<email>" and invalid "<password>"
     And User click on login button
-    Then User should see an error message "Error Those credentials do not match our records."
-   # And The flash message has a close button on the right and disapear in less than or equal to 5 seconds 
+    Then User should see an error message "Error Those credentials do not match our records." with a close button on the right
+    And I click the X next on the right side of error message
+    And The flash message should disapear in less than or equal to five seconds 
     And User should not be logged in
     
     Examples:

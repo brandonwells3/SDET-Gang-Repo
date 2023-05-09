@@ -47,13 +47,13 @@ public class CraterLoginPage {
 	@FindBy (xpath = "//div[text()='Password ']")
 	public WebElement lablePassword;
 	
-   @FindBy (xpath ="//p[contains(text(), 'Copyright @ Crater Invoice, Inc. 2023')]")
+   @FindBy (xpath ="//p[contains(text(),'Copyright @ Crater Invoice, Inc. 2023')]")
 	public WebElement textAreaOnButtomLeft;
 	
 	@FindBy (xpath = "//h1[contains(text(), 'Simple Invoicing for Individuals Small Businesses')]")
 	public WebElement firstHeading;
 	
-	@FindBy (xpath = "//p[contains(text(), 'Crater helps you track expenses, record payments & generate beautiful invoices & estimates.')]")
+	@FindBy (xpath = "//p[contains(text(),'Crater helps you track expenses, record payments & generate beautiful invoices & estimates.')]")
 	public WebElement secondHeading;
 	
 	@FindBy (xpath = "//h6[text()='Account Settings']")
@@ -62,8 +62,13 @@ public class CraterLoginPage {
 	@FindBy (xpath = "//p[text()='These credentials do not match our records.']")
 	public WebElement invalidLoginErrorMessage;
 	
+	@FindBy ( xpath = "//div[@class='p-4']//div//div//following-sibling::div[@class='flex shrink-0']")
+	public WebElement invalidLoginErrorMessageXBtn;
+	
 	@FindBy (xpath = "//span[text()='Field is required']")
 	public WebElement fieldIsRequiredMessage;
+	
+	
 	
 	public void login() {
 		utils = new BrowserUtils();
