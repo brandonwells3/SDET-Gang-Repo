@@ -16,28 +16,28 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
-@tag
+@createCustomerUIComponentValidation
 Feature: Verify UI Components of the Customers Page
   			 for Crater Invoice App
 
   @createCustomerUIComponentValidation
-  Scenario: Verify UI Components of the Customers Page
+  Scenario: Verify UI Components
     Given As an entity user, I am logged in
     When I click on the Customer Menu link
     Then I should see a page titled Customers
     And I should see the menu navigation paths as Home / customers placed under Customers
-    And I should see a button labeled Filter
-    And I should see a button labeled + Add Customer
-    # And I should see a table with the Columns: 
-   	And I see Pagination text as follow: Showing 1 to 10 of item Total results
+    And I should see a button labeled Filter in the Customers Page
+    And I should see a button labeled + New Customer
+   	And I should see a table with New Customer related headers
+   	And I see Pagination text as follow: Showing 1 to 10 of itemTotal results
    	And I should see Left and Right Arrows allowing user to navigate to previous and next pages 
-		And I should see number indicating the page the user is currently on and the next upcoming page
+		And I should see number indicating the page the user is currently on and the next upcoming pages
   	
-  	When I click on the first page
-		Then The Left Navgation Arrow should be disabled
+  	When I click on the first page in the Customers tab
+		Then The Left Navgation Arrow should be disabled in the Customers tab
 		
-		When I click on the last page
-		Then The Right Navigation Arrow should be disabled
+		When I click on the last page in the Customers tab
+		Then The Right Navigation Arrow should be disabled in the Customers tab
   
   
 
