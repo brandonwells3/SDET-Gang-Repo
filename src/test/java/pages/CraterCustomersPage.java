@@ -51,14 +51,28 @@ public class CraterCustomersPage {
 	public WebElement customersPageCurrentTotalNumOfCustomers;
 	
 	@FindBy ( xpath = "//span[text()='Previous']//parent::a")
-	public WebElement customersPagePagnationLeftArrowBTN;
+	public WebElement customersPagePaginationLeftArrowBTN;
 	
 	@FindBy ( xpath = "//span[text()='Next']//parent::a")
-	public WebElement customersPagePagnationRightArrowBTN;
+	public WebElement customersPagePaginationRightArrowBTN;
 	
+	@FindBy ( xpath = "//a[@class='z-10 bg-primary-50 border-primary-500 text-primary-600 relative items-center hidden px-4 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 hover:bg-gray-50 md:inline-flex']")
+	public WebElement customersPagePaginationCurrentMiddlePage;
 	
+	@FindBy ( xpath = "//nav[@aria-label='Pagination']//a[text()=' 1 ']")
+	public WebElement customersPagePaginationPage1;
 	
+	@FindBy ( xpath = "//nav[@aria-label='Pagination']//a[text()='2']")
+	public WebElement customersPagePaginationPage2;	
 	
+	@FindBy ( xpath = "//nav[@aria-label='Pagination']//a[text()='3']")
+	public WebElement customersPagePaginationPage3;	
+	
+	@FindBy ( xpath = "//nav[@aria-label='Pagination']//a[text()='4']")
+	public WebElement customersPagePaginationPage4;	
+	
+	@FindBy ( xpath = "//nav//a[contains(@class,'disabled')]")
+	public WebElement customersPagePaginationDisabledNavButton;
 	
 	
 }
