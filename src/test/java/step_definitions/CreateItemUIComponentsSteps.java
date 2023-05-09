@@ -83,6 +83,7 @@ public class CreateItemUIComponentsSteps {
 	
 	@Then("I see Pagination text as follow: Showing 1 to 10 of itemTotal results")
 	public void i_see_pagination_text_as_follow_showing_1_to_10_of_itemtotal_results() {
+		itemsPage = new CraterItemsPage();
 		utils.waitUntilElementVisible(itemsPage.itemsPagePagination);
 		Assert.assertEquals(itemsPage.itemsPagePagination.getText(), "Showing 1 to 10 of "+itemsPage.itemsPageCurrentTotal.getText()+" results");
 	}
@@ -90,6 +91,7 @@ public class CreateItemUIComponentsSteps {
 	@Then("I should see Left and Right Arrows allowing user to navigate to previous and next pages")
 	public void i_should_see_left_and_right_arrows_allowing_user_to_navigate_to_previous_and_next_pages() {
 		utils.waitUntilElementVisible(itemsPage.itemsPageNavLeftArrow);
+		utils.scrollTo(itemsPage.itemsPageNavLeftArrow);
 		Assert.assertTrue(itemsPage.itemsPageNavLeftArrow.isDisplayed());
 		Assert.assertTrue(itemsPage.itemsPageNavRightArrow.isDisplayed());
 	}

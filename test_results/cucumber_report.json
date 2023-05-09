@@ -3,11 +3,11 @@
     "line": 20,
     "elements": [
       {
-        "start_timestamp": "2023-05-08T18:59:03.867Z",
+        "start_timestamp": "2023-05-09T02:05:18.149Z",
         "before": [
           {
             "result": {
-              "duration": 1481120700,
+              "duration": 2887195900,
               "status": "passed"
             },
             "match": {
@@ -15,14 +15,14 @@
             }
           }
         ],
-        "line": 23,
-        "name": "User entereds Valid values to the data fields and wait for success message to disapear",
+        "line": 24,
+        "name": "Verify UI Components",
         "description": "",
-        "id": "verify-add-new-item---succeful;user-entereds-valid-values-to-the-data-fields-and-wait-for-success-message-to-disapear",
+        "id": "verify-ui-components-of-the-customers-page;verify-ui-components",
         "after": [
           {
             "result": {
-              "duration": 198768600,
+              "duration": 255702000,
               "status": "passed"
             },
             "match": {
@@ -35,10 +35,10 @@
         "steps": [
           {
             "result": {
-              "duration": 2531197000,
+              "duration": 2644029500,
               "status": "passed"
             },
-            "line": 24,
+            "line": 25,
             "name": "As an entity user, I am logged in",
             "match": {
               "location": "step_definitions.CreateItemUIComponentsSteps.as_an_entity_user_i_am_logged_in()"
@@ -47,173 +47,179 @@
           },
           {
             "result": {
-              "duration": 1719793000,
-              "status": "passed"
-            },
-            "line": 25,
-            "name": "I click on the Items Menu link",
-            "match": {
-              "location": "step_definitions.CreateItemUIComponentsSteps.i_click_on_the_items_menu_link()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 149498900,
+              "duration": 1751664300,
               "status": "passed"
             },
             "line": 26,
-            "name": "I should see a page titled Items",
+            "name": "I click on the Customer Menu link",
             "match": {
-              "location": "step_definitions.CreateItemUIComponentsSteps.i_should_see_a_page_titled_items()"
+              "location": "step_definitions.CreateCustomerUIComponentsSteps.i_click_on_the_customer_menu_link()"
             },
-            "keyword": "Then "
+            "keyword": "When "
           },
           {
             "result": {
-              "duration": 222887400,
+              "duration": 153389600,
               "status": "passed"
             },
             "line": 27,
-            "name": "I click + Add Item button",
+            "name": "I should see a page titled Customers",
             "match": {
-              "location": "step_definitions.CreateItemAddNewItemSuccessfulSteps.i_click_add_item_button()"
+              "location": "step_definitions.CreateCustomerUIComponentsSteps.i_should_see_a_page_titled_customers()"
             },
-            "keyword": "When "
+            "keyword": "Then "
           },
           {
             "result": {
-              "duration": 115427600,
+              "duration": 77739800,
               "status": "passed"
             },
             "line": 28,
-            "name": "I should see a page titled New Item",
+            "name": "I should see the menu navigation paths as Home / customers placed under Customers",
             "match": {
-              "location": "step_definitions.CreateItemAddNewItemSuccessfulSteps.i_should_see_a_page_titled_new_item()"
+              "location": "step_definitions.CreateCustomerUIComponentsSteps.i_should_see_the_menu_navigation_paths_as_home_customers_placed_under_customers()"
             },
-            "keyword": "Then "
+            "keyword": "And "
           },
           {
             "result": {
-              "duration": 7141978300,
+              "duration": 1108024100,
               "status": "passed"
             },
             "line": 29,
-            "name": "I provide valid item information name \"popsicle\", price \"199\", unit \"Dollars\", and description \"A cold Treat\"",
+            "name": "I should see a button labeled Filter in the Customers Page",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"popsicle\"",
-                  "offset": 38
-                },
-                {
-                  "val": "\"199\"",
-                  "offset": 56
-                },
-                {
-                  "val": "\"Dollars\"",
-                  "offset": 68
-                },
-                {
-                  "val": "\"A cold Treat\"",
-                  "offset": 95
-                }
-              ],
-              "location": "step_definitions.CreateItemAddNewItemSuccessfulSteps.i_provide_valid_item_information_name_price_unit_and_description(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+              "location": "step_definitions.CreateCustomerUIComponentsSteps.i_should_see_a_button_labeled_filter_in_the_customers_page()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 57805500,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "I should see a button labeled + New Customer",
+            "match": {
+              "location": "step_definitions.CreateCustomerUIComponentsSteps.i_should_see_a_button_labeled_new_customer()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 104650500,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "I should see a table with New Customer related headers",
+            "match": {
+              "location": "step_definitions.CreateCustomerUIComponentsSteps.i_should_see_a_table_with_new_customer_related_headers()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 71760300,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "I see Pagination text as follow: Showing 1 to 10 of itemTotal results",
+            "match": {
+              "location": "step_definitions.CreateItemUIComponentsSteps.i_see_pagination_text_as_follow_showing_1_to_10_of_itemtotal_results()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 80727400,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "I should see Left and Right Arrows allowing user to navigate to previous and next pages",
+            "match": {
+              "location": "step_definitions.CreateItemUIComponentsSteps.i_should_see_left_and_right_arrows_allowing_user_to_navigate_to_previous_and_next_pages()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 63788400,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "I should see number indicating the page the user is currently on and the next upcoming pages",
+            "match": {
+              "location": "step_definitions.CreateCustomerUIComponentsSteps.i_should_see_number_indicating_the_page_the_user_is_currently_on_and_the_next_upcoming_pages()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 161803500,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "I click on the first page in the Customers tab",
+            "match": {
+              "location": "step_definitions.CreateCustomerUIComponentsSteps.i_click_on_the_first_page_in_the_customers_tab()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 973065900,
+              "duration": 42855400,
               "status": "passed"
             },
-            "line": 30,
-            "name": "I should see a Success! popup message with a close button to the right",
+            "line": 37,
+            "name": "The Left Navgation Arrow should be disabled in the Customers tab",
             "match": {
-              "location": "step_definitions.CreateItemAddNewItemSuccessfulSteps.i_should_see_a_success_popup_message_with_a_close_button_to_the_right()"
+              "location": "step_definitions.CreateCustomerUIComponentsSteps.the_left_navgation_arrow_should_be_disabled_in_the_customers_tab()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 10148160100,
+              "duration": 172726100,
               "status": "passed"
             },
-            "line": 31,
-            "name": "The flash message should disapear within five seconds or less",
+            "line": 39,
+            "name": "I click on the last page in the Customers tab",
             "match": {
-              "location": "step_definitions.CreateItemAddNewItemSuccessfulSteps.the_flash_message_should_disapear_within_five_seconds_or_less()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 53820400,
-              "status": "passed"
-            },
-            "line": 32,
-            "name": "I should be directed to the Items Page",
-            "match": {
-              "location": "step_definitions.CreateItemAddNewItemSuccessfulSteps.i_should_be_directed_to_the_items_page()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 44907400,
-              "status": "passed"
-            },
-            "line": 33,
-            "name": "I should see a button labeled Filter",
-            "match": {
-              "location": "step_definitions.CreateItemUIComponentsSteps.i_should_see_a_button_labeled_filter()"
+              "location": "step_definitions.CreateCustomerUIComponentsSteps.i_click_on_the_last_page_in_the_customers_tab()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 384392000,
+              "duration": 49833200,
               "status": "passed"
             },
-            "line": 34,
-            "name": "I should see the new item added in the items table",
+            "line": 40,
+            "name": "The Right Navigation Arrow should be disabled in the Customers tab",
             "match": {
-              "location": "step_definitions.CreateItemAddNewItemSuccessfulSteps.i_should_see_the_new_item_added_in_the_items_table()"
+              "location": "step_definitions.CreateCustomerUIComponentsSteps.the_right_navigation_arrow_should_be_disabled_in_the_customers_tab()"
             },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 648650300,
-              "status": "passed"
-            },
-            "line": 35,
-            "name": "I should see the new item in database",
-            "match": {
-              "location": "step_definitions.CreateItemAddNewItemSuccessfulSteps.i_should_see_the_new_item_in_database()"
-            },
-            "keyword": "And "
+            "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@createItemAddNewSuccessful"
+            "name": "@createCustomerUIComponentValidation"
           },
           {
-            "name": "@createItemAddNewSuccessfulWaitForMessDisapearance"
+            "name": "@createCustomerUIComponentValidation"
           }
         ]
       }
     ],
-    "name": "Verify Add New Item - Succeful",
-    "description": "",
-    "id": "verify-add-new-item---succeful",
+    "name": "Verify UI Components of the Customers Page",
+    "description": "  \t\t\t for Crater Invoice App",
+    "id": "verify-ui-components-of-the-customers-page",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/CreateItemAddNewItemSuccessfull.feature",
+    "uri": "file:src/test/resources/features/CreateCustomerUIComponents.feature",
     "tags": [
       {
-        "name": "@createItemAddNewSuccessful",
+        "name": "@createCustomerUIComponentValidation",
         "type": "Tag",
         "location": {
           "line": 19,
