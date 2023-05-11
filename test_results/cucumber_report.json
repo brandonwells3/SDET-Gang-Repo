@@ -3,11 +3,11 @@
     "line": 20,
     "elements": [
       {
-        "start_timestamp": "2023-05-09T21:37:36.160Z",
+        "start_timestamp": "2023-05-11T21:38:21.382Z",
         "before": [
           {
             "result": {
-              "duration": 1602230600,
+              "duration": 1682053900,
               "status": "passed"
             },
             "match": {
@@ -15,14 +15,14 @@
             }
           }
         ],
-        "line": 24,
+        "line": 58,
         "name": "Verify New Customer UI Components",
         "description": "",
         "id": "verify-ui-components-of-the-new-customers-page;verify-new-customer-ui-components",
         "after": [
           {
             "result": {
-              "duration": 187618200,
+              "duration": 224218700,
               "status": "passed"
             },
             "match": {
@@ -35,10 +35,10 @@
         "steps": [
           {
             "result": {
-              "duration": 2072408400,
+              "duration": 2183439500,
               "status": "passed"
             },
-            "line": 25,
+            "line": 59,
             "name": "As an entity user, I am logged in",
             "match": {
               "location": "step_definitions.CreateItemUIComponentsSteps.as_an_entity_user_i_am_logged_in()"
@@ -47,10 +47,10 @@
           },
           {
             "result": {
-              "duration": 1678741600,
+              "duration": 1670297900,
               "status": "passed"
             },
-            "line": 26,
+            "line": 60,
             "name": "I click on the Customer Menu link",
             "match": {
               "location": "step_definitions.CreateCustomerUIComponentsSteps.i_click_on_the_customer_menu_link()"
@@ -59,10 +59,10 @@
           },
           {
             "result": {
-              "duration": 257646600,
+              "duration": 303059100,
               "status": "passed"
             },
-            "line": 27,
+            "line": 61,
             "name": "I click on + New Customer button",
             "match": {
               "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_click_on_new_customer_button()"
@@ -71,10 +71,10 @@
           },
           {
             "result": {
-              "duration": 116325300,
+              "duration": 133999800,
               "status": "passed"
             },
-            "line": 28,
+            "line": 62,
             "name": "I should be on the New Customers page",
             "match": {
               "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_should_be_on_the_new_customers_page()"
@@ -83,276 +83,112 @@
           },
           {
             "result": {
-              "duration": 24911700,
+              "duration": 1026591600,
               "status": "passed"
             },
-            "line": 29,
-            "name": "I should see the Basic Info section with the following Text Feilds",
+            "line": 63,
+            "name": "I scroll down to Billing Address",
             "match": {
-              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_should_see_the_basic_info_section_with_the_following_text_feilds(io.cucumber.datatable.DataTable)"
+              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_scroll_down_to_billing_address()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 166315300,
+              "status": "passed"
+            },
+            "line": 64,
+            "name": "I should see the Billing Address section with the following Text Feilds",
+            "match": {
+              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_should_see_the_billing_address_section_with_the_following_text_feilds(io.cucumber.datatable.DataTable)"
             },
             "rows": [
               {
                 "cells": [
-                  "Display Name",
-                  "Primary Contact Name",
-                  "Email",
+                  "Name",
+                  "Country",
+                  "State",
+                  "City",
+                  "Address",
                   "Phone",
-                  "Primary Currency",
-                  "Website",
-                  "Prefix"
+                  "Zip Code"
                 ]
               }
             ],
-            "keyword": "And "
+            "keyword": "Then "
           },
           {
             "result": {
+              "duration": 182030400,
               "status": "passed"
             },
-            "line": 31,
-            "name": "I should see an asterisk next to Display Name",
+            "line": 66,
+            "name": "I should not see any asterisks next to the text fields in the Billing Address Section",
             "match": {
-              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_should_see_an_asterisk_next_to_display_name()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 32,
-            "name": "I should not see an asterisk next to the other fields",
-            "match": {
-              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_should_not_see_an_asterisk_next_to_the_other_fields()"
+              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_should_not_see_any_asterisks_next_to_the_text_fields_in_the_billing_address_section()"
             },
             "keyword": "And "
           },
           {
             "result": {
+              "duration": 63999800,
               "status": "passed"
             },
-            "line": 34,
-            "name": "I Should see the Portal Access Section",
+            "line": 67,
+            "name": "I should see a button labeled Copy from Billing",
             "match": {
-              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_should_see_the_portal_access_section()"
+              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_should_see_a_button_labeled_copy_from_billing()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 993900,
+              "duration": 6932045600,
               "status": "passed"
             },
-            "line": 35,
-            "name": "I should see a toggle switch with the following text in grey above: \u0027Would you like to allow this customer to login to the Customer Portal?\u0027",
+            "line": 68,
+            "name": "I enter dummy information to the billing adress fields",
             "match": {
-              "arguments": [
-                {
-                  "val": "\u0027Would you like to allow this customer to login to the Customer Portal?\u0027",
-                  "offset": 68
-                }
-              ],
-              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_should_see_a_toggle_switch_with_the_following_text_in_grey_above(java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 996900,
-              "status": "passed"
-            },
-            "line": 36,
-            "name": "I should see the toggle switch in the off position by default in grey",
-            "match": {
-              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_should_see_the_toggle_switch_in_the_off_position_by_default_in_grey()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 38,
-            "name": "I click the toggle switch",
-            "match": {
-              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_click_the_toggle_switch()"
+              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_enter_dummy_information_to_the_billing_adress_fields()"
             },
             "keyword": "When "
           },
           {
             "result": {
+              "duration": 196630100,
               "status": "passed"
             },
-            "line": 39,
-            "name": "I should see the toggle switch in the on position in purple",
+            "line": 69,
+            "name": "I click the button labeled Copy from Billing",
             "match": {
-              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_should_see_the_toggle_switch_in_the_on_position_in_purple()"
+              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_click_the_button_labeled_copy_from_billing()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 294918100,
+              "status": "passed"
+            },
+            "line": 70,
+            "name": "I should see the same information from the Billing Addres Section in the Shipping Address Section",
+            "match": {
+              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_should_see_the_same_information_from_the_billing_addres_section_in_the_shipping_address_section()"
             },
             "keyword": "Then "
           },
           {
             "result": {
+              "duration": 35207763300,
               "status": "passed"
             },
-            "line": 40,
-            "name": "I should see a text box appear with a url",
+            "line": 71,
+            "name": "I should not see any asterisks next to the text fields in the Shipping Address Section",
             "match": {
-              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_should_see_a_text_box_appear_with_a_url()"
+              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_should_not_see_any_asterisks_next_to_the_text_fields_in_the_shipping_address_section()"
             },
             "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 41,
-            "name": "I should see a copy to clipboad button next to the url text field",
-            "match": {
-              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_should_see_a_copy_to_clipboad_button_next_to_the_url_text_field()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 995000,
-              "status": "passed"
-            },
-            "line": 42,
-            "name": "I should see a message \u0027Please copy \u0026 forward the above given URL to your customer for providing access.\u0027 underneath the url text field",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\u0027Please copy \u0026 forward the above given URL to your customer for providing access.\u0027",
-                  "offset": 23
-                }
-              ],
-              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_should_see_a_message_underneath_the_url_text_field(java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 43,
-            "name": "I should see a Password text field underneath url text field",
-            "match": {
-              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_should_see_a_password_text_field_underneath_url_text_field()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 44,
-            "name": "I should see a Confirm Password text field to the right of the Password text field",
-            "match": {
-              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_should_see_a_confirm_password_text_field_to_the_right_of_the_password_text_field()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 45,
-            "name": "I should see a show value button to the right of the Password text field",
-            "match": {
-              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_should_see_a_show_value_button_to_the_right_of_the_password_text_field()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 995600,
-              "status": "passed"
-            },
-            "line": 46,
-            "name": "I should see a show value button to the right of the Confrim Password text field",
-            "match": {
-              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_should_see_a_show_value_button_to_the_right_of_the_confrim_password_text_field()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 48,
-            "name": "I click the copy to clipboad button",
-            "match": {
-              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_click_the_copy_to_clipboad_button()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 49,
-            "name": "The url should be copied to clipboard",
-            "match": {
-              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.the_url_should_be_copied_to_clipboard()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 51,
-            "name": "I enter a value into Password and Confirm Password text fields",
-            "match": {
-              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_enter_a_value_into_password_and_confirm_password_text_fields()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 1001300,
-              "status": "passed"
-            },
-            "line": 52,
-            "name": "I click the show value button to the right of each text field",
-            "match": {
-              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_click_the_show_value_button_to_the_right_of_each_text_field()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 53,
-            "name": "I should be able to see the inputed values",
-            "match": {
-              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_should_be_able_to_see_the_inputed_values()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 55,
-            "name": "I click the show value button to the right of each text field",
-            "match": {
-              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_click_the_show_value_button_to_the_right_of_each_text_field()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 56,
-            "name": "I should not be able to see the inputed values",
-            "match": {
-              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_should_not_be_able_to_see_the_inputed_values()"
-            },
-            "keyword": "Then "
           }
         ],
         "tags": [
@@ -360,7 +196,7 @@
             "name": "@createCustomerNewCustomerUIComponentValidation"
           },
           {
-            "name": "@createCustomerNewCustomerUIComponentValidationBasicInfoANDPortalAcess"
+            "name": "@createCustomerNewCustomerUIComponentValidationBillingAddressANDShippingAddress"
           }
         ]
       }

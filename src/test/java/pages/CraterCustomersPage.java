@@ -1,9 +1,11 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utilities.BrowserUtils;
 import utilities.Driver;
 
 public class CraterCustomersPage {
@@ -12,6 +14,7 @@ public class CraterCustomersPage {
 		PageFactory.initElements(Driver.getDriver(), this);
 		
 	}
+	BrowserUtils utils;
 	
 	
 	@FindBy ( xpath = "//h3[text()='Customers']")
@@ -158,7 +161,10 @@ public class CraterCustomersPage {
 	@FindBy ( xpath = "//div[text()='Customer Portal Login URL ']//parent::label//following-sibling::div//div//span")
 	public WebElement customersPageNewCustomerPACustomerPortalURLLinkText;
 	
-	@FindBy ( xpath = "/html/body/div[1]/main/div/div/form/div[2]/div/div[2]/div/div[2]/div/div/svg")
+	@FindBy ( xpath = "//span[text()='Please copy & forward the above given URL to your customer for providing access.']")
+	public WebElement customersPageNewCustomerPACustomerPortalPleaseCopyAndForwardMess;
+	
+	@FindBy ( xpath = "//div[text()='Customer Portal Login URL ']//parent::label//following-sibling::div//div//span//following-sibling::*[local-name() = 'svg']")
 	public WebElement customersPageNewCustomerPACustomerPortalCopyToClipBoardBTN;
 	
 	@FindBy ( xpath = "//input[@name='password']")
@@ -167,43 +173,87 @@ public class CraterCustomersPage {
 	@FindBy ( xpath = "//input[@name='confirm_password']")
 	public WebElement customersPageNewCustomerPAConfirmPasswordTextField;
 	
-	@FindBy ( xpath = "/html/body/div[1]/main/div/div/form/div[2]/div/div[2]/div/div[3]/div/div/div/svg")
+	@FindBy ( xpath = "//input[@name='password']//following-sibling::div//*[local-name() = 'svg']")
 	public WebElement customersPageNewCustomerPAShowPasswordBTN;
 	
-	@FindBy ( xpath = "/html/body/div[1]/main/div/div/form/div[2]/div/div[2]/div/div[4]/div/div/div/svg")
+	@FindBy ( xpath = "//input[@name='confirm_password']//following-sibling::div//*[local-name() = 'svg']")
 	public WebElement customersPageNewCustomerPAShowConfirmPasswordBTN;
 	
 	
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////	
 /* Billing Address Section */	
 	
+	public void newCustomerFillBillingAddressInfo(String name, String country, String state, String city, String address1, String address2, String phone, String zipcode) throws InterruptedException {
+		utils = new BrowserUtils();
+		Thread.sleep(500);
+		utils.waitUntilElementVisible(customersPageNewCustomerBANameTextField);
+		utils.actionsSendKeys(customersPageNewCustomerBANameTextField, name);
+		Thread.sleep(500);
+		utils.waitUntilElementVisible(customersPageNewCustomerBACountryTextField);
+		utils.actionsClick(customersPageNewCustomerBACountryTextField);
+		Thread.sleep(500);
+		utils.actionsClick(Driver.getDriver().findElement(By.xpath("//h6[text()='Billing Address']//parent::div//div//div//label//div[text()='Country ']//parent::label//following-sibling::div//div//div//div//ul//li//span[text()='"+country+"']")));
+		Thread.sleep(500);
+		utils.waitUntilElementVisible(customersPageNewCustomerBAStateTextField);
+		utils.actionsSendKeys(customersPageNewCustomerBAStateTextField, state);
+		Thread.sleep(500);
+		utils.waitUntilElementVisible(customersPageNewCustomerBACityTextField);
+		utils.actionsSendKeys(customersPageNewCustomerBACityTextField, city);
+		Thread.sleep(500);
+		utils.waitUntilElementVisible(customersPageNewCustomerBAAddressLine1TextField);
+		utils.actionsSendKeys(customersPageNewCustomerBAAddressLine1TextField, address1);
+		Thread.sleep(500);
+		utils.waitUntilElementVisible(customersPageNewCustomerBAAddressLine2TextField);
+		utils.actionsSendKeys(customersPageNewCustomerBAAddressLine2TextField, address2);
+		Thread.sleep(500);
+		utils.waitUntilElementVisible(customersPageNewCustomerBAPhoneTextField);
+		utils.actionsSendKeys(customersPageNewCustomerBAPhoneTextField, phone);
+		Thread.sleep(500);
+		utils.waitUntilElementVisible(customersPageNewCustomerBAZipCodeTextField);
+		utils.actionsSendKeys(customersPageNewCustomerBAZipCodeTextField, zipcode);
+		Thread.sleep(500);
+	}
 	
 	@FindBy ( xpath = "//h6[text()='Billing Address']")
 	public WebElement customersPageNewCustomerBillingAddressHeaderText;
 	
 	@FindBy ( xpath = "//h6[text()='Billing Address']//parent::div//div//div//label//div[text()='Name ']//parent::label//following-sibling::div//div//input")
 	public WebElement customersPageNewCustomerBANameTextField;
+	@FindBy ( xpath = "//h6[text()='Billing Address']//parent::div//div//div//label//div[text()='Name ']")
+	public WebElement customersPageNewCustomerBANameTextFieldLabel;
 	
 	@FindBy ( xpath = "//h6[text()='Billing Address']//parent::div//div//div//label//div[text()='State ']//parent::label//following-sibling::div//div//input")
 	public WebElement customersPageNewCustomerBAStateTextField;
+	@FindBy ( xpath = "//h6[text()='Billing Address']//parent::div//div//div//label//div[text()='State ']")
+	public WebElement customersPageNewCustomerBAStateTextFieldLabel;
 	
 	@FindBy ( xpath = "//h6[text()='Billing Address']//parent::div//div//div//label//div[text()='Country ']//parent::label//following-sibling::div//div//input")
 	public WebElement customersPageNewCustomerBACountryTextField;
+	@FindBy ( xpath = "//h6[text()='Billing Address']//parent::div//div//div//label//div[text()='Country ']")
+	public WebElement customersPageNewCustomerBACountryTextFieldLabel;
 	
 	@FindBy ( xpath = "//h6[text()='Billing Address']//parent::div//div//div//label//div[text()='City ']//parent::label//following-sibling::div//div//input")
 	public WebElement customersPageNewCustomerBACityTextField;
+	@FindBy ( xpath = "//h6[text()='Billing Address']//parent::div//div//div//label//div[text()='City ']")
+	public WebElement customersPageNewCustomerBACityTextFieldLabel;
 	
 	@FindBy ( xpath = "//h6[text()='Billing Address']//parent::div//div//div//label//div[text()='Address ']//parent::label//following-sibling::div//textarea[@name='billing_street1']")
 	public WebElement customersPageNewCustomerBAAddressLine1TextField;
 	
 	@FindBy ( xpath = "//h6[text()='Billing Address']//parent::div//div//div//label//div[text()='Address ']//parent::label//following-sibling::div//textarea[@name='billing_street2']")
 	public WebElement customersPageNewCustomerBAAddressLine2TextField;
+	@FindBy ( xpath = "//h6[text()='Billing Address']//parent::div//div//div//label//div[text()='Address ']")
+	public WebElement customersPageNewCustomerBAAddressTextFieldLabel;
 	
 	@FindBy ( xpath = "//h6[text()='Billing Address']//parent::div//div//div//label//div[text()='Phone ']//parent::label//following-sibling::div//div//input")
 	public WebElement customersPageNewCustomerBAPhoneTextField;
+	@FindBy ( xpath = "//h6[text()='Billing Address']//parent::div//div//div//label//div[text()='Phone ']")
+	public WebElement customersPageNewCustomerBAPhoneTextFieldLabel;
 	
 	@FindBy ( xpath = "//h6[text()='Billing Address']//parent::div//div//div//label//div[text()='Zip Code ']//parent::label//following-sibling::div//div//input")
 	public WebElement customersPageNewCustomerBAZipCodeTextField;
+	@FindBy ( xpath = "//h6[text()='Billing Address']//parent::div//div//div//label//div[text()='Zip Code ']")
+	public WebElement customersPageNewCustomerBAZipCodeTextFieldLabel;
 	
 	@FindBy ( xpath = "//div[@class='p-1']//button")
 	public WebElement customersPageNewCustomerCopyFromBillingBTN;
@@ -234,10 +284,10 @@ public class CraterCustomersPage {
 	@FindBy ( xpath = "//h6[text()='Shipping Address']//parent::div//div//div//label//div[text()='Zip Code ']//parent::label//following-sibling::div//div//input")
 	public WebElement customersPageNewCustomerSAZipCodeTextField;
 	
-	@FindBy ( xpath = "")
-	public WebElement customersPageNewCustomer;
+	@FindBy ( xpath = "//h6[text()='Shipping Address']//following-sibling::div//div//textarea[@name='shipping_street1']")
+	public WebElement customersPageNewCustomerSAAdressLine1;
 	
-	@FindBy ( xpath = "")
-	public WebElement customersPageNewCustomer1;
+	@FindBy ( xpath = "//h6[text()='Shipping Address']//following-sibling::div//div//textarea[@name='shipping_street2']")
+	public WebElement customersPageNewCustomerSAAdressLine2;
 		
 }
