@@ -46,11 +46,10 @@ Feature: Verify UI Components of the New Customers page
 		And I should see a show value button to the right of the Confrim Password text field
 		
 		When I click the copy to clipboad button
-		Then The url should be copied to clipboard
-		
-		When I enter a value into Password and Confirm Password text fields
+		And I enter a value into Password and Confirm Password text fields
 		And I click the show value button to the right of each text field
-		Then I should be able to see the inputed values
+		Then The url should be copied to clipboard
+		And I should be able to see the inputed values
 		
 		When I click the show value button to the right of each text field
 		Then I should not be able to see the inputed values
@@ -63,10 +62,11 @@ Feature: Verify UI Components of the New Customers page
     Then I should be on the New Customers page
     When I scroll down to Billing Address
     Then I should see the Billing Address section with the following Text Feilds
-    | Name | Country | State | City | Address Street 1 | Address Street 2 | Phone | Zipcode |
+    | Name | Country | State | City | Address | Phone | Zip Code |
   	And I should not see any asterisks next to the text fields in the Billing Address Section
   	And I should see a button labeled Copy from Billing
-  	When I click the button labeled Copy from Billing
+  	When I enter dummy information to the billing adress fields
+  	And I click the button labeled Copy from Billing
   	Then I should see the same information from the Billing Addres Section in the Shipping Address Section
   	And I should not see any asterisks next to the text fields in the Shipping Address Section
   	
