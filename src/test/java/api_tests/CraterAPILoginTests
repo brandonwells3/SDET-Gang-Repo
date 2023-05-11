@@ -96,7 +96,7 @@ public class CraterInvoiceAPIs {
 				+ "}";
 				
 		
-		response = given().header("Company", "1").accept(ContentType.JSON).contentType("application/json").body(requestBody).post(endpoint).thenReturn();
+		response = given().header("Company", "1").accept(ContentType.JSON).contentType("application/json").body(requestBody).put(endpoint).thenReturn();
 		
 		System.out.println(response.getStatusCode());
 		Assert.assertEquals(response.getStatusCode(), 405);
