@@ -19,7 +19,7 @@ public class BrowserUtils {
 	
 	// waits for an element to be visable 
 	public void waitUntilElementVisible(WebElement element) {
-		wait = new WebDriverWait(Driver.getDriver(), 10);
+		wait = new WebDriverWait(Driver.getDriver(), 5);
 		wait.until(ExpectedConditions.visibilityOf(element));	
 	}
 	
