@@ -8,19 +8,20 @@ import utilities.BrowserUtils;
 import org.testng.Assert;
 import static io.restassured.RestAssured.*;
 
-public class CraterAPILoginTests {
+public class CraterInvoiceAPIs {
+	private static String token;
 
 	BrowserUtils utils = new BrowserUtils();
 	Response response;
-	String token;
-	
+		
 	@BeforeTest
 	public void setup() {
 		baseURI = "http://crater.primetech-apps.com/api/v1";
 	}
 	
-	@Test
-	public void getStatus() {
+	//DONE
+	@Test(priority = 1)
+	public void getLoginStatus() {
 		String endpoint = "/auth/login";
 		String requestBody = "{\n"
 				+ "    \"username\": \"entityadmin@primetechschool.com\",\n"
@@ -29,43 +30,77 @@ public class CraterAPILoginTests {
 				+ "}";
 				
 		
-		response = given().header("Authorization", "Bearer <406|sJpI2fWB6Qs8iCQ8Kf30QKc4sGJSC1A7eKzMpbMN>").header("Company", "1").accept(ContentType.JSON).contentType("application/json").body(requestBody).post(endpoint).thenReturn();
+		response = given().header("Company", "1").accept(ContentType.JSON).contentType("application/json").body(requestBody).post(endpoint).thenReturn();
 		
 		System.out.println(response.getBody().asString());
 		Assert.assertEquals(response.getStatusCode(), 200);
+		
+		token = response.jsonPath().get("token");
 	}
 	
-	@Test (dependsOnMethods = "getStatus")
-	public void getBody() {
-		token = "125|WeV9Q75LCHNY46ypIv1oZ2eBY0r4setFf0eotX8J";
+	//DONE
+	@Test (priority = 2)
+	public void getLogoutStatus() {
+		String endpoint = "/auth/logout";
 		
-		String endpoint = "/auth/login";
+		response = given().header("Authorization", "Bearer " + token).header("Company", "1").accept(ContentType.JSON).contentType("application/json").post(endpoint).thenReturn();
+		
+		Assert.assertEquals(response.getStatusCode(), 200);
+		System.out.println(response.getStatusCode());
+	}
+	
+	//DONE
+	@Test
+	public void getIncorrectEnd() {
+		String endpoint = "/auth/log";
 		String requestBody = "{\n"
 				+ "    \"username\": \"entityadmin@primetechschool.com\",\n"
 				+ "    \"password\" : \"primetech@school\",\n"
 				+ "    \"device_name\":\"mobile_app\"\n"
 				+ "}";
-		
-		response = given().contentType("application/json")
-				.accept(ContentType.JSON)
-				.post()
-				.thenReturn();
 				
-				response.prettyPrint();
-				Assert.assertEquals(response.getStatusCode(), 200);
-				
-//		response.prettyPrint()
-//		Assert.assertEquals(response.getStatusCode(), 200);
-//		Assert.assertEquals(response.getContentType(), "application/json");
 		
+		response = given().header("Authorization", "Bearer " + token).header("Company", "1").accept(ContentType.JSON).contentType("application/json").body(requestBody).post(endpoint).thenReturn();
 		
+		Assert.assertEquals(response.getStatusCode(), 404);
+		System.out.println(response.getStatusCode());
 		
-//		response.prettyPrint();
-//		Assert.assertEquals(response.getStatusCode(), 200);
-//		Assert.assertEquals(response.getContentType(), "application/json");
-//		Assert.assertEquals(response.jsonPath().getString("token"), token);
-//		
-//		System.out.println(response.path("type").toString());
-//		System.out.println(response.jsonPath().get("token").toString());
 	}
+	
+	//DONE
+	@Test
+	public void getWrongBody() {
+		String endpoint = "/auth/login";
+		String requestBody = "{\n"
+				+ "    \"usname\": \"entityadmin@primetechschool.com\",\n"
+				+ "    \"paword\" : \"primetech@school\",\n"
+				+ "    \"dee_name\":\"mobile_app\"\n"
+				+ "}";
+				
+		
+		response = given().header("Authorization", "Bearer " + token).header("Company", "1").accept(ContentType.JSON).contentType("application/json").body(requestBody).post(endpoint).thenReturn();
+		
+		System.out.println(response.getStatusCode());
+		Assert.assertEquals(response.getStatusCode(), 422);
+
+	}
+	
+	//DONE
+	@Test
+	public void getWrongCreds() {
+		String endpoint = "/auth/login";
+		String requestBody = "{\n"
+				+ "    \"username\": \"entitoadmin@primetechschool.com\",\n"
+				+ "    \"password\" : \"primet3ch@school\",\n"
+				+ "    \"device_name\":\"mobile_app\"\n"
+				+ "}";
+				
+		
+		response = given().header("Company", "1").accept(ContentType.JSON).contentType("application/json").body(requestBody).post(endpoint).thenReturn();
+		
+		System.out.println(response.getStatusCode());
+		Assert.assertEquals(response.getStatusCode(), 405);
+
+	}
+	
 }
