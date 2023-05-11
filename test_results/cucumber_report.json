@@ -1,13 +1,13 @@
 [
   {
-    "line": 2,
+    "line": 20,
     "elements": [
       {
-        "start_timestamp": "2023-05-09T21:30:39.392Z",
+        "start_timestamp": "2023-05-09T21:37:36.160Z",
         "before": [
           {
             "result": {
-              "duration": 5784276000,
+              "duration": 1602230600,
               "status": "passed"
             },
             "match": {
@@ -15,14 +15,14 @@
             }
           }
         ],
-        "line": 5,
-        "name": "Verify UI Components",
+        "line": 24,
+        "name": "Verify New Customer UI Components",
         "description": "",
-        "id": "verify-ui-components-of-login-page-for-crater-app.;verify-ui-components",
+        "id": "verify-ui-components-of-the-new-customers-page;verify-new-customer-ui-components",
         "after": [
           {
             "result": {
-              "duration": 84930000,
+              "duration": 187618200,
               "status": "passed"
             },
             "match": {
@@ -35,183 +35,347 @@
         "steps": [
           {
             "result": {
-              "duration": 10605900000,
+              "duration": 2072408400,
               "status": "passed"
             },
-            "line": 6,
-            "name": "As a user, I am on the Login Page of crater App.",
+            "line": 25,
+            "name": "As an entity user, I am logged in",
             "match": {
-              "location": "step_definitions.LoginUIComponents.as_a_user_i_am_on_the_login_page_of_crater_app()"
+              "location": "step_definitions.CreateItemUIComponentsSteps.as_an_entity_user_i_am_logged_in()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 1258909000,
+              "duration": 1678741600,
               "status": "passed"
             },
-            "line": 7,
-            "name": "I should see Page Title \"crater\"",
+            "line": 26,
+            "name": "I click on the Customer Menu link",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"crater\"",
-                  "offset": 24
-                }
-              ],
-              "location": "step_definitions.LoginUIComponents.i_should_see_page_title(java.lang.String)"
+              "location": "step_definitions.CreateCustomerUIComponentsSteps.i_click_on_the_customer_menu_link()"
             },
-            "keyword": "And "
+            "keyword": "When "
           },
           {
             "result": {
-              "duration": 172271000,
+              "duration": 257646600,
               "status": "passed"
             },
-            "line": 8,
-            "name": "I should be able to see a Text Box with the Label \"Email *\"",
+            "line": 27,
+            "name": "I click on + New Customer button",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"Email *\"",
-                  "offset": 50
-                }
-              ],
-              "location": "step_definitions.LoginUIComponents.i_should_be_able_to_see_a_text_box_with_the_label(java.lang.String)"
+              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_click_on_new_customer_button()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 99718000,
+              "duration": 116325300,
               "status": "passed"
             },
-            "line": 9,
-            "name": "I sholud see a Text Box with the lable \"Password*\"",
+            "line": 28,
+            "name": "I should be on the New Customers page",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"Password*\"",
-                  "offset": 39
-                }
-              ],
-              "location": "step_definitions.LoginUIComponents.i_sholud_see_a_text_box_with_the_lable(java.lang.String)"
+              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_should_be_on_the_new_customers_page()"
             },
-            "keyword": "And "
+            "keyword": "Then "
           },
           {
             "result": {
-              "duration": 104653000,
+              "duration": 24911700,
               "status": "passed"
             },
-            "line": 10,
-            "name": "I should see a link titled \"Forgot Passowrd?\"",
+            "line": 29,
+            "name": "I should see the Basic Info section with the following Text Feilds",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"Forgot Passowrd?\"",
-                  "offset": 27
-                }
-              ],
-              "location": "step_definitions.LoginUIComponents.i_should_see_a_link_titled(java.lang.String)"
+              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_should_see_the_basic_info_section_with_the_following_text_feilds(io.cucumber.datatable.DataTable)"
             },
+            "rows": [
+              {
+                "cells": [
+                  "Display Name",
+                  "Primary Contact Name",
+                  "Email",
+                  "Phone",
+                  "Primary Currency",
+                  "Website",
+                  "Prefix"
+                ]
+              }
+            ],
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 92968000,
               "status": "passed"
             },
-            "line": 11,
-            "name": "I should see a primary button labled \"Login\"",
+            "line": 31,
+            "name": "I should see an asterisk next to Display Name",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"Login\"",
-                  "offset": 37
-                }
-              ],
-              "location": "step_definitions.LoginUIComponents.i_should_see_a_primary_button_labled(java.lang.String)"
+              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_should_see_an_asterisk_next_to_display_name()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "error_message": "org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on MAC (e43cbcf1f35c8bba0a96369738974232)] -\u003e xpath: //p[contains(text(),\u0027Copyright @ Crater Invoice, Inc. 2023\u0027)]] (tried for 10 second(s) with 500 milliseconds interval)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027Irinas-MacBook-Pro.local\u0027, ip: \u00272601:249:d00:10b4:0:0:0:e3c1%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002713.3.1\u0027, java.version: \u002717.0.5\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.92, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: /var/folders/cp/qsfwkfsd03g...}, goog:chromeOptions: {debuggerAddress: localhost:50777}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: e43cbcf1f35c8bba0a96369738974232\n\tat org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)\n\tat utilities.BrowserUtils.waitUntilElementVisible(BrowserUtils.java:23)\n\tat step_definitions.LoginUIComponents.i_should_see_a_text_area_on_the_bottom_left(LoginUIComponents.java:65)\n\tat ✽.I should see a Text area on the bottom left \"Copyright @ Crater Invoice, Inc. 2023\"(file:///Users/irina/SDET-Gang-Repo/./src/test/resources/features/LoginUIComponents.feature:12)\n",
-              "duration": 10077220000,
-              "status": "failed"
+              "status": "passed"
             },
-            "line": 12,
-            "name": "I should see a Text area on the bottom left \"Copyright @ Crater Invoice, Inc. 2023\"",
+            "line": 32,
+            "name": "I should not see an asterisk next to the other fields",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"Copyright @ Crater Invoice, Inc. 2023\"",
-                  "offset": 44
-                }
-              ],
-              "location": "step_definitions.LoginUIComponents.i_should_see_a_text_area_on_the_bottom_left(java.lang.String)"
+              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_should_not_see_an_asterisk_next_to_the_other_fields()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 1659000,
-              "status": "skipped"
+              "status": "passed"
             },
-            "line": 13,
-            "name": "I should see the first Heading with the following text \"Simple Invoicing for Individuals Small Businesses\"",
+            "line": 34,
+            "name": "I Should see the Portal Access Section",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"Simple Invoicing for Individuals Small Businesses\"",
-                  "offset": 55
-                }
-              ],
-              "location": "step_definitions.LoginUIComponents.i_should_see_the_first_heading_with_the_following_text(java.lang.String)"
+              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_should_see_the_portal_access_section()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 51000,
-              "status": "skipped"
+              "duration": 993900,
+              "status": "passed"
             },
-            "line": 14,
-            "name": "I should see the second Heading \"Crater helps you track expenses, record payments \u0026 generate beautiful invoices \u0026 estimates.\"",
+            "line": 35,
+            "name": "I should see a toggle switch with the following text in grey above: \u0027Would you like to allow this customer to login to the Customer Portal?\u0027",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Crater helps you track expenses, record payments \u0026 generate beautiful invoices \u0026 estimates.\"",
-                  "offset": 32
+                  "val": "\u0027Would you like to allow this customer to login to the Customer Portal?\u0027",
+                  "offset": 68
                 }
               ],
-              "location": "step_definitions.LoginUIComponents.i_should_see_the_second_heading(java.lang.String)"
+              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_should_see_a_toggle_switch_with_the_following_text_in_grey_above(java.lang.String)"
             },
             "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 996900,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "I should see the toggle switch in the off position by default in grey",
+            "match": {
+              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_should_see_the_toggle_switch_in_the_off_position_by_default_in_grey()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "I click the toggle switch",
+            "match": {
+              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_click_the_toggle_switch()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "I should see the toggle switch in the on position in purple",
+            "match": {
+              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_should_see_the_toggle_switch_in_the_on_position_in_purple()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "I should see a text box appear with a url",
+            "match": {
+              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_should_see_a_text_box_appear_with_a_url()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "I should see a copy to clipboad button next to the url text field",
+            "match": {
+              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_should_see_a_copy_to_clipboad_button_next_to_the_url_text_field()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 995000,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "I should see a message \u0027Please copy \u0026 forward the above given URL to your customer for providing access.\u0027 underneath the url text field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027Please copy \u0026 forward the above given URL to your customer for providing access.\u0027",
+                  "offset": 23
+                }
+              ],
+              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_should_see_a_message_underneath_the_url_text_field(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "I should see a Password text field underneath url text field",
+            "match": {
+              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_should_see_a_password_text_field_underneath_url_text_field()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "I should see a Confirm Password text field to the right of the Password text field",
+            "match": {
+              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_should_see_a_confirm_password_text_field_to_the_right_of_the_password_text_field()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "I should see a show value button to the right of the Password text field",
+            "match": {
+              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_should_see_a_show_value_button_to_the_right_of_the_password_text_field()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 995600,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "I should see a show value button to the right of the Confrim Password text field",
+            "match": {
+              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_should_see_a_show_value_button_to_the_right_of_the_confrim_password_text_field()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "I click the copy to clipboad button",
+            "match": {
+              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_click_the_copy_to_clipboad_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "The url should be copied to clipboard",
+            "match": {
+              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.the_url_should_be_copied_to_clipboard()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "I enter a value into Password and Confirm Password text fields",
+            "match": {
+              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_enter_a_value_into_password_and_confirm_password_text_fields()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1001300,
+              "status": "passed"
+            },
+            "line": 52,
+            "name": "I click the show value button to the right of each text field",
+            "match": {
+              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_click_the_show_value_button_to_the_right_of_each_text_field()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 53,
+            "name": "I should be able to see the inputed values",
+            "match": {
+              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_should_be_able_to_see_the_inputed_values()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 55,
+            "name": "I click the show value button to the right of each text field",
+            "match": {
+              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_click_the_show_value_button_to_the_right_of_each_text_field()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "I should not be able to see the inputed values",
+            "match": {
+              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_should_not_be_able_to_see_the_inputed_values()"
+            },
+            "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@LoginUIComponentsValidation"
+            "name": "@createCustomerNewCustomerUIComponentValidation"
           },
           {
-            "name": "@LoginUIComponents"
+            "name": "@createCustomerNewCustomerUIComponentValidationBasicInfoANDPortalAcess"
           }
         ]
       }
     ],
-    "name": "Verify UI Components of Login page for Crater App.",
-    "description": "",
-    "id": "verify-ui-components-of-login-page-for-crater-app.",
+    "name": "Verify UI Components of the New Customers page",
+    "description": "  \t\t\t on the Customers tab for Crater Invoice App",
+    "id": "verify-ui-components-of-the-new-customers-page",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/LoginUIComponents.feature",
+    "uri": "file:src/test/resources/features/CreateCustomerNewCustomerUIComponents.feature",
     "tags": [
       {
-        "name": "@LoginUIComponentsValidation",
+        "name": "@createCustomerNewCustomerUIComponentValidation",
         "type": "Tag",
         "location": {
-          "line": 1,
+          "line": 19,
           "column": 1
         }
       }
