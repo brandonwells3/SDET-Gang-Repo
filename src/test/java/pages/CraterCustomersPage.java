@@ -17,6 +17,62 @@ public class CraterCustomersPage {
 	BrowserUtils utils;
 	
 	
+	
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////	
+/* Methods */	
+	
+	public void newCustomerFillBillingAddressInfo(String name, String country, String state, String city, String address1, String address2, String phone, String zipcode) throws InterruptedException {
+		utils = new BrowserUtils();
+		Thread.sleep(500);
+		utils.waitUntilElementVisible(customersPageNewCustomerBANameTextField);
+		utils.actionsSendKeys(customersPageNewCustomerBANameTextField, name);
+		Thread.sleep(500);
+		utils.waitUntilElementVisible(customersPageNewCustomerBACountryTextField);
+		utils.actionsClick(customersPageNewCustomerBACountryTextField);
+		Thread.sleep(500);
+		utils.actionsClick(Driver.getDriver().findElement(By.xpath("//h6[text()='Billing Address']//parent::div//div//div//label//div[text()='Country ']//parent::label//following-sibling::div//div//div//div//ul//li//span[text()='"+country+"']")));
+		Thread.sleep(500);
+		utils.waitUntilElementVisible(customersPageNewCustomerBAStateTextField);
+		utils.actionsSendKeys(customersPageNewCustomerBAStateTextField, state);
+		Thread.sleep(500);
+		utils.waitUntilElementVisible(customersPageNewCustomerBACityTextField);
+		utils.actionsSendKeys(customersPageNewCustomerBACityTextField, city);
+		Thread.sleep(500);
+		utils.waitUntilElementVisible(customersPageNewCustomerBAAddressLine1TextField);
+		utils.actionsSendKeys(customersPageNewCustomerBAAddressLine1TextField, address1);
+		Thread.sleep(500);
+		utils.waitUntilElementVisible(customersPageNewCustomerBAAddressLine2TextField);
+		utils.actionsSendKeys(customersPageNewCustomerBAAddressLine2TextField, address2);
+		Thread.sleep(500);
+		utils.waitUntilElementVisible(customersPageNewCustomerBAPhoneTextField);
+		utils.actionsSendKeys(customersPageNewCustomerBAPhoneTextField, phone);
+		Thread.sleep(500);
+		utils.waitUntilElementVisible(customersPageNewCustomerBAZipCodeTextField);
+		utils.actionsSendKeys(customersPageNewCustomerBAZipCodeTextField, zipcode);
+		Thread.sleep(500);
+	}	
+	
+	public void findCustomer(String name) throws InterruptedException {
+		utils = new BrowserUtils();
+		utils.waitUntilElementToBeClickable(customersPageFilterBTN);
+		utils.actionsClick(customersPageFilterBTN);
+		Thread.sleep(2000);
+		utils.waitUntilElementVisible(customersPageFilterDisplayName);
+		utils.actionsSendKeys(customersPageFilterDisplayName, name);
+		Thread.sleep(2000);
+	}
+	
+	
+	
+	
+	
+	
+	
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////	
+/* Customer Home Page Section */	
+	
 	@FindBy ( xpath = "//h3[text()='Customers']")
 	public WebElement customersPageCustomerHeaderText;
 	
@@ -28,6 +84,15 @@ public class CraterCustomersPage {
 	
 	@FindBy ( xpath = "//button[text()='Filter ']")
 	public WebElement customersPageFilterBTN;
+	
+	@FindBy ( xpath = "//input[@name='name']")
+	public WebElement customersPageFilterDisplayName;
+	
+	@FindBy ( xpath = "//span[text()='Test_Customer_']//parent::a//parent::td//following-sibling::td//div//button")
+	public WebElement customersPageTestCustomerThreeDotsBTN;
+	
+	@FindBy ( xpath = "//a[text()=' View']")
+	public WebElement customersPageTestCustomerViewBTN;
 	
 	@FindBy ( xpath = "//button[text()=' New Customer']")
 	public WebElement customersPageNewCustomerBTN;
@@ -183,36 +248,6 @@ public class CraterCustomersPage {
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////	
 /* Billing Address Section */	
 	
-	public void newCustomerFillBillingAddressInfo(String name, String country, String state, String city, String address1, String address2, String phone, String zipcode) throws InterruptedException {
-		utils = new BrowserUtils();
-		Thread.sleep(500);
-		utils.waitUntilElementVisible(customersPageNewCustomerBANameTextField);
-		utils.actionsSendKeys(customersPageNewCustomerBANameTextField, name);
-		Thread.sleep(500);
-		utils.waitUntilElementVisible(customersPageNewCustomerBACountryTextField);
-		utils.actionsClick(customersPageNewCustomerBACountryTextField);
-		Thread.sleep(500);
-		utils.actionsClick(Driver.getDriver().findElement(By.xpath("//h6[text()='Billing Address']//parent::div//div//div//label//div[text()='Country ']//parent::label//following-sibling::div//div//div//div//ul//li//span[text()='"+country+"']")));
-		Thread.sleep(500);
-		utils.waitUntilElementVisible(customersPageNewCustomerBAStateTextField);
-		utils.actionsSendKeys(customersPageNewCustomerBAStateTextField, state);
-		Thread.sleep(500);
-		utils.waitUntilElementVisible(customersPageNewCustomerBACityTextField);
-		utils.actionsSendKeys(customersPageNewCustomerBACityTextField, city);
-		Thread.sleep(500);
-		utils.waitUntilElementVisible(customersPageNewCustomerBAAddressLine1TextField);
-		utils.actionsSendKeys(customersPageNewCustomerBAAddressLine1TextField, address1);
-		Thread.sleep(500);
-		utils.waitUntilElementVisible(customersPageNewCustomerBAAddressLine2TextField);
-		utils.actionsSendKeys(customersPageNewCustomerBAAddressLine2TextField, address2);
-		Thread.sleep(500);
-		utils.waitUntilElementVisible(customersPageNewCustomerBAPhoneTextField);
-		utils.actionsSendKeys(customersPageNewCustomerBAPhoneTextField, phone);
-		Thread.sleep(500);
-		utils.waitUntilElementVisible(customersPageNewCustomerBAZipCodeTextField);
-		utils.actionsSendKeys(customersPageNewCustomerBAZipCodeTextField, zipcode);
-		Thread.sleep(500);
-	}
 	
 	@FindBy ( xpath = "//h6[text()='Billing Address']")
 	public WebElement customersPageNewCustomerBillingAddressHeaderText;
@@ -290,4 +325,48 @@ public class CraterCustomersPage {
 	@FindBy ( xpath = "//h6[text()='Shipping Address']//following-sibling::div//div//textarea[@name='shipping_street2']")
 	public WebElement customersPageNewCustomerSAAdressLine2;
 		
-}
+	
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////	
+/* Sales & Expenses Section */		
+																		//*[local-name() = 'svg']
+	@FindBy ( xpath = "//h6[text()=' Sales & Expenses']")
+	public WebElement customersPageSalesAndExpensesHeaderText;
+	
+	@FindBy ( xpath = "//h6[text()='Basic Info']")
+	public WebElement customersPageSalesAndExpensesBasicInfoHeaderText;
+	
+	@FindBy ( xpath = "//label[text()='Display Name']")
+	public WebElement customersPageSalesAndExpensesBIDisplayNameLabel;
+	@FindBy ( xpath = "//label[text()='Display Name']//following-sibling::p")
+	public WebElement customersPageSalesAndExpensesBIDisplayNameCustomerText;
+	
+	@FindBy ( xpath = "//label[text()='Primary Contact Name']")
+	public WebElement customersPageSalesAndExpensesBIPimaryContactLabel;
+	@FindBy ( xpath = "//label[text()='Primary Contact Name']//following-sibling::p")
+	public WebElement customersPageSalesAndExpensesBIPimaryContactCustomerText;
+	
+	@FindBy ( xpath = "//label[text()='Email']")
+	public WebElement customersPageSalesAndExpensesBIEmailLabel;
+	@FindBy ( xpath = "//label[text()='Email']//following-sibling::p")
+	public WebElement customersPageSalesAndExpensesBIEmailCustomerText;
+	
+	@FindBy ( xpath = "//label[text()='Currency']")
+	public WebElement customersPageSalesAndExpensesBICurrencyLabel;
+	@FindBy ( xpath = "//label[text()='Currency']//following-sibling::p")
+	public WebElement customersPageSalesAndExpensesBICurrencyCustomerText;
+	
+	@FindBy ( xpath = "//label[text()='Phone Number']")
+	public WebElement customersPageSalesAndExpensesBIPhoneNumberLabel;
+	@FindBy ( xpath = "//label[text()='Phone Number']//following-sibling::p")
+	public WebElement customersPageSalesAndExpensesBIPhoneNumberCustomerText;
+	
+	@FindBy ( xpath = "//label[text()='Website']")
+	public WebElement customersPageSalesAndExpensesBIWebsiteLabel;
+	@FindBy ( xpath = "//label[text()='Website']//following-sibling::p")
+	public WebElement customersPageSalesAndExpensesBIWebsiteCustomerText;
+	
+	
+	
+	
+}	
