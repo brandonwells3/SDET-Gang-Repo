@@ -8,7 +8,7 @@ import utilities.BrowserUtils;
 import org.testng.Assert;
 import static io.restassured.RestAssured.*;
 
-public class CraterAPILoginTests {
+public class CraterAPILoginTest {
 	private static String token;
 
 	BrowserUtils utils = new BrowserUtils();
