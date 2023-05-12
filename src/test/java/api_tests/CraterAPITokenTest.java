@@ -12,7 +12,7 @@ import org.hamcrest.Matchers;
 import org.testng.Assert;
 import static io.restassured.RestAssured.*;
 
-public class CraterAPIToken {
+public class CraterAPITokenTest {
 
 
 String baseUrl="http://crater.primetech-apps.com/";
