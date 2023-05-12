@@ -5,6 +5,8 @@ import java.io.File;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import io.restassured.http.ContentType;
+import io.restassured.http.Header;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.hamcrest.Matchers;
 import org.testng.Assert;
