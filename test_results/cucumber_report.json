@@ -1,13 +1,13 @@
 [
   {
-    "line": 2,
+    "line": 20,
     "elements": [
       {
-        "start_timestamp": "2023-05-09T21:30:39.392Z",
+        "start_timestamp": "2023-05-12T00:45:30.086Z",
         "before": [
           {
             "result": {
-              "duration": 5784276000,
+              "duration": 1534963300,
               "status": "passed"
             },
             "match": {
@@ -15,14 +15,14 @@
             }
           }
         ],
-        "line": 5,
-        "name": "Verify UI Components",
+        "line": 24,
+        "name": "Verify UI Components for Sales and Expenses page",
         "description": "",
-        "id": "verify-ui-components-of-login-page-for-crater-app.;verify-ui-components",
+        "id": "verify-ui-components-of-the-sales-and-expenses-page;verify-ui-components-for-sales-and-expenses-page",
         "after": [
           {
             "result": {
-              "duration": 84930000,
+              "duration": 241440200,
               "status": "passed"
             },
             "match": {
@@ -35,183 +35,122 @@
         "steps": [
           {
             "result": {
-              "duration": 10605900000,
+              "duration": 2746863700,
               "status": "passed"
             },
-            "line": 6,
-            "name": "As a user, I am on the Login Page of crater App.",
+            "line": 25,
+            "name": "As an entity user, I am logged in",
             "match": {
-              "location": "step_definitions.LoginUIComponents.as_a_user_i_am_on_the_login_page_of_crater_app()"
+              "location": "step_definitions.CreateItemUIComponentsSteps.as_an_entity_user_i_am_logged_in()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 1258909000,
+              "duration": 1873588500,
               "status": "passed"
             },
-            "line": 7,
-            "name": "I should see Page Title \"crater\"",
+            "line": 26,
+            "name": "I click on the Customer Menu link",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"crater\"",
-                  "offset": 24
-                }
-              ],
-              "location": "step_definitions.LoginUIComponents.i_should_see_page_title(java.lang.String)"
+              "location": "step_definitions.CreateCustomerUIComponentsSteps.i_click_on_the_customer_menu_link()"
             },
-            "keyword": "And "
+            "keyword": "When "
           },
           {
             "result": {
-              "duration": 172271000,
+              "duration": 7753599000,
               "status": "passed"
             },
-            "line": 8,
-            "name": "I should be able to see a Text Box with the Label \"Email *\"",
+            "line": 27,
+            "name": "I click the three dots next to test customer",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"Email *\"",
-                  "offset": 50
-                }
-              ],
-              "location": "step_definitions.LoginUIComponents.i_should_be_able_to_see_a_text_box_with_the_label(java.lang.String)"
+              "location": "step_definitions.CreateCustomerSalesAndExpensesUIComponentsSteps.i_click_the_three_dots_next_to_test_customer()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 99718000,
+              "duration": 712994300,
               "status": "passed"
             },
-            "line": 9,
-            "name": "I sholud see a Text Box with the lable \"Password*\"",
+            "line": 28,
+            "name": "I click the View button",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"Password*\"",
-                  "offset": 39
-                }
-              ],
-              "location": "step_definitions.LoginUIComponents.i_sholud_see_a_text_box_with_the_lable(java.lang.String)"
+              "location": "step_definitions.CreateCustomerSalesAndExpensesUIComponentsSteps.i_click_the_view_button()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 104653000,
+              "duration": 564759200,
               "status": "passed"
             },
-            "line": 10,
-            "name": "I should see a link titled \"Forgot Passowrd?\"",
+            "line": 29,
+            "name": "I should be directed to the Customer Sales and Expenses page",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"Forgot Passowrd?\"",
-                  "offset": 27
-                }
-              ],
-              "location": "step_definitions.LoginUIComponents.i_should_see_a_link_titled(java.lang.String)"
+              "location": "step_definitions.CreateCustomerSalesAndExpensesUIComponentsSteps.i_should_be_directed_to_the_customer_sales_and_expenses_page()"
             },
-            "keyword": "And "
+            "keyword": "Then "
           },
           {
             "result": {
-              "duration": 92968000,
+              "duration": 57505700,
               "status": "passed"
             },
-            "line": 11,
-            "name": "I should see a primary button labled \"Login\"",
+            "line": 30,
+            "name": "I should see grey text titled basic info",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"Login\"",
-                  "offset": 37
-                }
-              ],
-              "location": "step_definitions.LoginUIComponents.i_should_see_a_primary_button_labled(java.lang.String)"
+              "location": "step_definitions.CreateCustomerSalesAndExpensesUIComponentsSteps.i_should_see_grey_text_titled_basic_info()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "error_message": "org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on MAC (e43cbcf1f35c8bba0a96369738974232)] -\u003e xpath: //p[contains(text(),\u0027Copyright @ Crater Invoice, Inc. 2023\u0027)]] (tried for 10 second(s) with 500 milliseconds interval)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027Irinas-MacBook-Pro.local\u0027, ip: \u00272601:249:d00:10b4:0:0:0:e3c1%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002713.3.1\u0027, java.version: \u002717.0.5\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.92, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: /var/folders/cp/qsfwkfsd03g...}, goog:chromeOptions: {debuggerAddress: localhost:50777}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: e43cbcf1f35c8bba0a96369738974232\n\tat org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)\n\tat utilities.BrowserUtils.waitUntilElementVisible(BrowserUtils.java:23)\n\tat step_definitions.LoginUIComponents.i_should_see_a_text_area_on_the_bottom_left(LoginUIComponents.java:65)\n\tat ✽.I should see a Text area on the bottom left \"Copyright @ Crater Invoice, Inc. 2023\"(file:///Users/irina/SDET-Gang-Repo/./src/test/resources/features/LoginUIComponents.feature:12)\n",
-              "duration": 10077220000,
-              "status": "failed"
+              "duration": 157247900,
+              "status": "passed"
             },
-            "line": 12,
-            "name": "I should see a Text area on the bottom left \"Copyright @ Crater Invoice, Inc. 2023\"",
+            "line": 31,
+            "name": "I should see the following detail headers for the customer",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"Copyright @ Crater Invoice, Inc. 2023\"",
-                  "offset": 44
-                }
-              ],
-              "location": "step_definitions.LoginUIComponents.i_should_see_a_text_area_on_the_bottom_left(java.lang.String)"
+              "location": "step_definitions.CreateCustomerSalesAndExpensesUIComponentsSteps.i_should_see_the_following_detail_headers_for_the_customer(io.cucumber.datatable.DataTable)"
             },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 1659000,
-              "status": "skipped"
-            },
-            "line": 13,
-            "name": "I should see the first Heading with the following text \"Simple Invoicing for Individuals Small Businesses\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Simple Invoicing for Individuals Small Businesses\"",
-                  "offset": 55
-                }
-              ],
-              "location": "step_definitions.LoginUIComponents.i_should_see_the_first_heading_with_the_following_text(java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 51000,
-              "status": "skipped"
-            },
-            "line": 14,
-            "name": "I should see the second Heading \"Crater helps you track expenses, record payments \u0026 generate beautiful invoices \u0026 estimates.\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Crater helps you track expenses, record payments \u0026 generate beautiful invoices \u0026 estimates.\"",
-                  "offset": 32
-                }
-              ],
-              "location": "step_definitions.LoginUIComponents.i_should_see_the_second_heading(java.lang.String)"
-            },
+            "rows": [
+              {
+                "cells": [
+                  "Display Name",
+                  "Primary Contact Name",
+                  "Email",
+                  "Currency",
+                  "Phone Number",
+                  "Website"
+                ]
+              }
+            ],
             "keyword": "And "
           }
         ],
         "tags": [
           {
-            "name": "@LoginUIComponentsValidation"
+            "name": "@CreateCustomerSalesAndExpensesUIComponents"
           },
           {
-            "name": "@LoginUIComponents"
+            "name": "@CreateCustomerSalesAndExpensesUIComponents"
           }
         ]
       }
     ],
-    "name": "Verify UI Components of Login page for Crater App.",
-    "description": "",
-    "id": "verify-ui-components-of-login-page-for-crater-app.",
+    "name": "Verify UI Components of the Sales and Expenses page",
+    "description": "  \t\t\t on the Customers tab for Crater Invoice App",
+    "id": "verify-ui-components-of-the-sales-and-expenses-page",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/LoginUIComponents.feature",
+    "uri": "file:src/test/resources/features/CreateCustomerSalesAndExpensesUIComponents.feature",
     "tags": [
       {
-        "name": "@LoginUIComponentsValidation",
+        "name": "@CreateCustomerSalesAndExpensesUIComponents",
         "type": "Tag",
         "location": {
-          "line": 1,
+          "line": 19,
           "column": 1
         }
       }
