@@ -3,11 +3,11 @@
     "line": 20,
     "elements": [
       {
-        "start_timestamp": "2023-05-11T21:38:21.382Z",
+        "start_timestamp": "2023-05-12T00:45:30.086Z",
         "before": [
           {
             "result": {
-              "duration": 1682053900,
+              "duration": 1534963300,
               "status": "passed"
             },
             "match": {
@@ -15,14 +15,14 @@
             }
           }
         ],
-        "line": 58,
-        "name": "Verify New Customer UI Components",
+        "line": 24,
+        "name": "Verify UI Components for Sales and Expenses page",
         "description": "",
-        "id": "verify-ui-components-of-the-new-customers-page;verify-new-customer-ui-components",
+        "id": "verify-ui-components-of-the-sales-and-expenses-page;verify-ui-components-for-sales-and-expenses-page",
         "after": [
           {
             "result": {
-              "duration": 224218700,
+              "duration": 241440200,
               "status": "passed"
             },
             "match": {
@@ -35,10 +35,10 @@
         "steps": [
           {
             "result": {
-              "duration": 2183439500,
+              "duration": 2746863700,
               "status": "passed"
             },
-            "line": 59,
+            "line": 25,
             "name": "As an entity user, I am logged in",
             "match": {
               "location": "step_definitions.CreateItemUIComponentsSteps.as_an_entity_user_i_am_logged_in()"
@@ -47,10 +47,10 @@
           },
           {
             "result": {
-              "duration": 1670297900,
+              "duration": 1873588500,
               "status": "passed"
             },
-            "line": 60,
+            "line": 26,
             "name": "I click on the Customer Menu link",
             "match": {
               "location": "step_definitions.CreateCustomerUIComponentsSteps.i_click_on_the_customer_menu_link()"
@@ -59,156 +59,95 @@
           },
           {
             "result": {
-              "duration": 303059100,
+              "duration": 7753599000,
               "status": "passed"
             },
-            "line": 61,
-            "name": "I click on + New Customer button",
+            "line": 27,
+            "name": "I click the three dots next to test customer",
             "match": {
-              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_click_on_new_customer_button()"
+              "location": "step_definitions.CreateCustomerSalesAndExpensesUIComponentsSteps.i_click_the_three_dots_next_to_test_customer()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 133999800,
+              "duration": 712994300,
               "status": "passed"
             },
-            "line": 62,
-            "name": "I should be on the New Customers page",
+            "line": 28,
+            "name": "I click the View button",
             "match": {
-              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_should_be_on_the_new_customers_page()"
+              "location": "step_definitions.CreateCustomerSalesAndExpensesUIComponentsSteps.i_click_the_view_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 564759200,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "I should be directed to the Customer Sales and Expenses page",
+            "match": {
+              "location": "step_definitions.CreateCustomerSalesAndExpensesUIComponentsSteps.i_should_be_directed_to_the_customer_sales_and_expenses_page()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 1026591600,
+              "duration": 57505700,
               "status": "passed"
             },
-            "line": 63,
-            "name": "I scroll down to Billing Address",
+            "line": 30,
+            "name": "I should see grey text titled basic info",
             "match": {
-              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_scroll_down_to_billing_address()"
+              "location": "step_definitions.CreateCustomerSalesAndExpensesUIComponentsSteps.i_should_see_grey_text_titled_basic_info()"
             },
-            "keyword": "When "
+            "keyword": "And "
           },
           {
             "result": {
-              "duration": 166315300,
+              "duration": 157247900,
               "status": "passed"
             },
-            "line": 64,
-            "name": "I should see the Billing Address section with the following Text Feilds",
+            "line": 31,
+            "name": "I should see the following detail headers for the customer",
             "match": {
-              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_should_see_the_billing_address_section_with_the_following_text_feilds(io.cucumber.datatable.DataTable)"
+              "location": "step_definitions.CreateCustomerSalesAndExpensesUIComponentsSteps.i_should_see_the_following_detail_headers_for_the_customer(io.cucumber.datatable.DataTable)"
             },
             "rows": [
               {
                 "cells": [
-                  "Name",
-                  "Country",
-                  "State",
-                  "City",
-                  "Address",
-                  "Phone",
-                  "Zip Code"
+                  "Display Name",
+                  "Primary Contact Name",
+                  "Email",
+                  "Currency",
+                  "Phone Number",
+                  "Website"
                 ]
               }
             ],
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 182030400,
-              "status": "passed"
-            },
-            "line": 66,
-            "name": "I should not see any asterisks next to the text fields in the Billing Address Section",
-            "match": {
-              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_should_not_see_any_asterisks_next_to_the_text_fields_in_the_billing_address_section()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 63999800,
-              "status": "passed"
-            },
-            "line": 67,
-            "name": "I should see a button labeled Copy from Billing",
-            "match": {
-              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_should_see_a_button_labeled_copy_from_billing()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 6932045600,
-              "status": "passed"
-            },
-            "line": 68,
-            "name": "I enter dummy information to the billing adress fields",
-            "match": {
-              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_enter_dummy_information_to_the_billing_adress_fields()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 196630100,
-              "status": "passed"
-            },
-            "line": 69,
-            "name": "I click the button labeled Copy from Billing",
-            "match": {
-              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_click_the_button_labeled_copy_from_billing()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 294918100,
-              "status": "passed"
-            },
-            "line": 70,
-            "name": "I should see the same information from the Billing Addres Section in the Shipping Address Section",
-            "match": {
-              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_should_see_the_same_information_from_the_billing_addres_section_in_the_shipping_address_section()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 35207763300,
-              "status": "passed"
-            },
-            "line": 71,
-            "name": "I should not see any asterisks next to the text fields in the Shipping Address Section",
-            "match": {
-              "location": "step_definitions.CreateCustomerNewCustomerUIComponentsSteps.i_should_not_see_any_asterisks_next_to_the_text_fields_in_the_shipping_address_section()"
-            },
             "keyword": "And "
           }
         ],
         "tags": [
           {
-            "name": "@createCustomerNewCustomerUIComponentValidation"
+            "name": "@CreateCustomerSalesAndExpensesUIComponents"
           },
           {
-            "name": "@createCustomerNewCustomerUIComponentValidationBillingAddressANDShippingAddress"
+            "name": "@CreateCustomerSalesAndExpensesUIComponents"
           }
         ]
       }
     ],
-    "name": "Verify UI Components of the New Customers page",
+    "name": "Verify UI Components of the Sales and Expenses page",
     "description": "  \t\t\t on the Customers tab for Crater Invoice App",
-    "id": "verify-ui-components-of-the-new-customers-page",
+    "id": "verify-ui-components-of-the-sales-and-expenses-page",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/CreateCustomerNewCustomerUIComponents.feature",
+    "uri": "file:src/test/resources/features/CreateCustomerSalesAndExpensesUIComponents.feature",
     "tags": [
       {
-        "name": "@createCustomerNewCustomerUIComponentValidation",
+        "name": "@CreateCustomerSalesAndExpensesUIComponents",
         "type": "Tag",
         "location": {
           "line": 19,
