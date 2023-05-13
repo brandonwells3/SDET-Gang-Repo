@@ -46,13 +46,13 @@ public class CraterLoginPage {
 	
 	@FindBy (xpath = "//div[text()='Password ']")
 	public WebElement lablePassword;
-	
-   @FindBy (xpath ="//p[contains(text(), 'Copyright @ Crater Invoice, Inc. 2023')]")
+	//p[text()='Copyright @ Crater Invoice, Inc. 2023']
+   @FindBy (xpath ="//p[text()='Copyright @ Crater Invoice, Inc. 2023']")
 	public WebElement textAreaOnButtomLeft;
 	
 	@FindBy (xpath = "//h1[contains(text(), 'Simple Invoicing for Individuals Small Businesses')]")
 	public WebElement firstHeading;
-	
+								//p[text()='Crater helps you track expenses, record payments & generate beautiful invoices & estimates.']
 	@FindBy (xpath = "//p[contains(text(), 'Crater helps you track expenses, record payments & generate beautiful invoices & estimates.')]")
 	public WebElement secondHeading;
 	

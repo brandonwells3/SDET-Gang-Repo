@@ -22,6 +22,36 @@ public class CraterCustomersPage {
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////	
 /* Methods */	
 	
+	
+	public void newCustomerFillBasicInfo(String displayName, String primaryName, String email, String phone, String primaryCurrency, String website, String prefix) throws InterruptedException {
+		utils = new BrowserUtils();
+		Thread.sleep(500);
+		utils.waitUntilElementVisible(customersPageNewCustomerBIDisplayNameTextField);
+		utils.actionsSendKeys(customersPageNewCustomerBIDisplayNameTextField, displayName);
+		Thread.sleep(500);
+		utils.waitUntilElementVisible(customersPageNewCustomerBIPrimaryContactNameTextField);
+		utils.actionsSendKeys(customersPageNewCustomerBIPrimaryContactNameTextField, primaryName);
+		Thread.sleep(500);
+		utils.waitUntilElementVisible(customersPageNewCustomerBIEmailTextFeild);
+		utils.actionsSendKeys(customersPageNewCustomerBIEmailTextFeild, email);
+		Thread.sleep(500);
+		utils.waitUntilElementVisible(customersPageNewCustomerBIPhoneTextFeild);
+		utils.actionsSendKeys(customersPageNewCustomerBIPhoneTextFeild, phone);
+		Thread.sleep(500);
+		utils.waitUntilElementToBeClickable(customersPageNewCustomerBIPrimaryCurrencyTextField);
+		utils.actionsClick(customersPageNewCustomerBIPrimaryCurrencyTextField);
+		Thread.sleep(500);
+		utils.actionsClick(Driver.getDriver().findElement(By.xpath("//div[text()='Primary Currency ']//parent::label//following-sibling::div//div//div//div//ul//li//span[text()='"+primaryCurrency+"']")));
+		Thread.sleep(500);
+		utils.waitUntilElementVisible(customersPageNewCustomerBIWebsiteTextField);
+		utils.actionsSendKeys(customersPageNewCustomerBIWebsiteTextField, website);
+		Thread.sleep(500);
+		utils.waitUntilElementVisible(customersPageNewCustomerBIPrefixTextField);
+		utils.actionsSendKeys(customersPageNewCustomerBIPrefixTextField, prefix);
+		Thread.sleep(500);
+	}
+	
+	
 	public void newCustomerFillBillingAddressInfo(String name, String country, String state, String city, String address1, String address2, String phone, String zipcode) throws InterruptedException {
 		utils = new BrowserUtils();
 		Thread.sleep(500);
@@ -151,8 +181,33 @@ public class CraterCustomersPage {
 	@FindBy ( xpath = "//a[text()='New Customer']")
 	public WebElement customersPageMenuNavigationNewCustomer;
 	
+	@FindBy ( xpath = "//h3[text()='New Customer']")
+	public WebElement customersPageNewCustomerHeaderText;
+	
 	@FindBy ( xpath = "//div[@class='flex items-center']//div//button")
 	public WebElement customersPageNewCustomerSaveCustomerBTN;
+	
+	@FindBy ( xpath = "//p[text()='Success!']")
+	public WebElement customersPageNewCustomerSuccessMess;
+	
+	@FindBy ( xpath = "//p[text()='Success!']//parent::div//following-sibling::div//button")
+	public WebElement customersPageNewCustomerSuccessMessCloseBTN;
+	
+	@FindBy ( xpath = "//a[text()=' Edit']")
+	public WebElement customersPageNewCustomer3DotsEditBTN;
+	@FindBy ( xpath = "//a[text()=' View']")
+	public WebElement customersPageNewCustomer3DotsViewBTN;
+	@FindBy ( xpath = "//a[text()=' Delete']")
+	public WebElement customersPageNewCustomer3DotsDeleteBTN;
+	
+	@FindBy ( xpath = "//h3[text()='Are you sure?']")
+	public WebElement customersPageNewCustomerDeleteModalAreYourSureMess;
+	@FindBy ( xpath = "//p[text()='You will not be able to recover this customer and all the related Invoices, Estimates and Payments.']")
+	public WebElement customersPageNewCustomerDeleteModalYouWillNotBeAbleToRecoverMess;
+	@FindBy ( xpath = "//button[text()='Ok']")
+	public WebElement customersPageNewCustomerDeleteModalOkayBTN;
+	@FindBy ( xpath = "//button[text()='Cancel']")
+	public WebElement customersPageNewCustomerDeleteModalCancelBTN;
 	
 	
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////	
@@ -199,6 +254,8 @@ public class CraterCustomersPage {
 	
 	@FindBy ( xpath = "//div[text()='Display Name ']//span[text()=' * ']")
 	public WebElement customersPageNewCustomerBIDisplayNameRedAsterisk;
+	
+
 	
 	
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////	
@@ -266,6 +323,8 @@ public class CraterCustomersPage {
 	public WebElement customersPageNewCustomerBACountryTextField;
 	@FindBy ( xpath = "//h6[text()='Billing Address']//parent::div//div//div//label//div[text()='Country ']")
 	public WebElement customersPageNewCustomerBACountryTextFieldLabel;
+	@FindBy ( xpath = "//h6[text()='Billing Address']//parent::div//div//div//label//div[text()='Country ']//parent::label//following-sibling::div//div//input//following-sibling::div")
+	public WebElement customersPageNewCustomerBACountryTextFieldCurrentSelected;
 	
 	@FindBy ( xpath = "//h6[text()='Billing Address']//parent::div//div//div//label//div[text()='City ']//parent::label//following-sibling::div//div//input")
 	public WebElement customersPageNewCustomerBACityTextField;
