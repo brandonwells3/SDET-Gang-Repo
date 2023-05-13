@@ -34,6 +34,8 @@ public class CraterItemsPage {
 		Thread.sleep(1000);
 		utils.actionsClick(Driver.getDriver().findElement(By.xpath("//span[text()='"+itemUnit+"']")));
 		
+		
+		
 		utils.waitUntilElementVisible(itemsPageNewItemDescriptionField);
 		utils.actionsSendKeys(itemsPageNewItemDescriptionField, itemDescription);
 		Thread.sleep(1000);
