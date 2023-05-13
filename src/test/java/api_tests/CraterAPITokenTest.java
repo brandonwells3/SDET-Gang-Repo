@@ -1,5 +1,23 @@
+package api_tests;
+
+import static org.testng.Assert.*;
+import java.io.File;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+import io.restassured.http.ContentType;
+import io.restassured.http.Header;
+import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
+import org.hamcrest.Matchers;
+import org.testng.Assert;
+import static io.restassured.RestAssured.*;
+
+public class CraterAPITokenTest {
+
+
 String baseUrl="http://crater.primetech-apps.com/";
 	public static String  token;
+	
 	
 	@Test(priority=0,groups="tokenValidation")
 	public void validLogin() {
@@ -60,3 +78,4 @@ String baseUrl="http://crater.primetech-apps.com/";
 		assertEquals(response.getStatusCode(), 404);
 		
 	}
+}
